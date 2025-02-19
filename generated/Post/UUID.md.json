@@ -1,0 +1,26 @@
+{
+  "tags": [],
+  "body": {
+    "raw": "\nUUID: 跨越时间空间的的主键。32 位 16 进制: 8 - 4 - 4 - 4 - 122",
+    "html": "<p>UUID: 跨越时间空间的的主键。32 位 16 进制: 8 - 4 - 4 - 4 - 122</p>"
+  },
+  "_id": "UUID.md",
+  "_raw": {
+    "sourceFilePath": "UUID.md",
+    "sourceFileName": "UUID.md",
+    "sourceFileDir": ".",
+    "contentType": "markdown",
+    "flattenedPath": "UUID"
+  },
+  "type": "Post",
+  "slug": "UUID",
+  "path": "UUID",
+  "filePath": "UUID.md",
+  "toc": [],
+  "structuredData": {
+    "@context": "https://schema.org",
+    "@type": "BlogPosting",
+    "image": "/static/images/twitter-card.png",
+    "url": "https://tailwind-nextjs-starter-blog.vercel.app/UUID"
+  }
+}

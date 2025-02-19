@@ -1,0 +1,26 @@
+{
+  "tags": [],
+  "body": {
+    "raw": "\n`nodejs` 无法直接与操作系统进行交流,需要通过 v8 的 `c++` binding 来使用调用操作系统API.\n\n汇编语言，根据CPU 会编译为可执行文件。\n`c++`  文件编译为汇编. 再按照汇编的路执行。\n\n\n`javascript` 通过 初代`javascript` 引擎将语言转为二进制。\n\n现代`javascript` 引擎将代码转为 bytecode\n\n",
+    "html": "<p><code>nodejs</code> 无法直接与操作系统进行交流,需要通过 v8 的 <code>c++</code> binding 来使用调用操作系统API.</p>\n<p>汇编语言，根据CPU 会编译为可执行文件。\n<code>c++</code>  文件编译为汇编. 再按照汇编的路执行。</p>\n<p><code>javascript</code> 通过 初代<code>javascript</code> 引擎将语言转为二进制。</p>\n<p>现代<code>javascript</code> 引擎将代码转为 bytecode</p>"
+  },
+  "_id": "node deep dive.md",
+  "_raw": {
+    "sourceFilePath": "node deep dive.md",
+    "sourceFileName": "node deep dive.md",
+    "sourceFileDir": ".",
+    "contentType": "markdown",
+    "flattenedPath": "node deep dive"
+  },
+  "type": "Post",
+  "slug": "node deep dive",
+  "path": "node deep dive",
+  "filePath": "node deep dive.md",
+  "toc": [],
+  "structuredData": {
+    "@context": "https://schema.org",
+    "@type": "BlogPosting",
+    "image": "/static/images/twitter-card.png",
+    "url": "https://tailwind-nextjs-starter-blog.vercel.app/node deep dive"
+  }
+}

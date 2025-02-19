@@ -1,0 +1,37 @@
+{
+  "tags": [],
+  "body": {
+    "raw": "* [让你 nodejs 水平暴增的 debugger 技巧 - 知乎 (zhihu.com)](https://zhuanlan.zhihu.com/p/387270007)\n* *[Debugging - Getting Started | Node.js (nodejs.org)](https://nodejs.org/en/docs/guides/debugging-getting-started/)\n\n\n## Main Question: 怎么调试下段程序？\n``` javascript\nfunction sum(a, b) {\n  return a + b;\n}\n\nlet result = sum(2,3);\n```\n\n\n\n> When started with the `--inspect` switch, a Node.js process listens for a debugging client. By default, it will listen at host and port 127.0.0.1:9229. Each process is also assigned a unique [[[UUID]]](https://tools.ietf.org/html/rfc4122).\n\n[Debugging - Getting Started | Node.js (nodejs.org)](https://nodejs.org/en/docs/guides/debugging-getting-started/#Inspector%20Clients)\n1. 打开 Node.js Inspector。\n2. 使用  Inspector Clients 连接 \n\n方式一：chrome inspector clinets 连接。\n直接使用 node `--inpect-brk`  script.js  或者 node inspect script.js\n打开浏览器 `F12`  点击左上角图标。\n\n\n\n![image-20230222213126798](https://picgo1-1300491698.cos.ap-nanjing.myqcloud.com//image-20230222213126798.png)\n之后可在source 中调试web 程序一般。\n\n前者是自动断点程序程序执行。\n后者是将程序\n>  Spawn child process to run user's script under --inspect flag; and use main process to run [[CLI debugger]].\n\n\n为什么不用官方的`--inspect ` 参数执行？\n\n方式2：使用vscode\n\n直接`crtl+shift+D` 打开调试窗口，创建一个node 的 配置，便会自动调试。\n\n![image-20230222215410212](https://picgo1-1300491698.cos.ap-nanjing.myqcloud.com//image-20230222215410212.png)\n\n注意：launch 和 attach 的区别 。\n\n\n### nextjs 调试\n\n\nhttps://www.nextjs.cn/docs/advanced-features/debugging",
+    "html": "<ul>\n<li><a href=\"https://zhuanlan.zhihu.com/p/387270007\">让你 nodejs 水平暴增的 debugger 技巧 - 知乎 (zhihu.com)</a></li>\n<li>*<a href=\"https://nodejs.org/en/docs/guides/debugging-getting-started/\">Debugging - Getting Started | Node.js (nodejs.org)</a></li>\n</ul>\n<h2>Main Question: 怎么调试下段程序？</h2>\n<pre><code class=\"language-javascript\">function sum(a, b) {\n  return a + b;\n}\n\nlet result = sum(2,3);\n</code></pre>\n<blockquote>\n<p>When started with the <code>--inspect</code> switch, a Node.js process listens for a debugging client. By default, it will listen at host and port 127.0.0.1:9229. Each process is also assigned a unique <a href=\"https://tools.ietf.org/html/rfc4122\">[[UUID]]</a>.</p>\n</blockquote>\n<p><a href=\"https://nodejs.org/en/docs/guides/debugging-getting-started/#Inspector%20Clients\">Debugging - Getting Started | Node.js (nodejs.org)</a></p>\n<ol>\n<li>打开 Node.js Inspector。</li>\n<li>使用  Inspector Clients 连接</li>\n</ol>\n<p>方式一：chrome inspector clinets 连接。\n直接使用 node <code>--inpect-brk</code>  script.js  或者 node inspect script.js\n打开浏览器 <code>F12</code>  点击左上角图标。</p>\n<p><img src=\"https://picgo1-1300491698.cos.ap-nanjing.myqcloud.com//image-20230222213126798.png\" alt=\"image-20230222213126798\">\n之后可在source 中调试web 程序一般。</p>\n<p>前者是自动断点程序程序执行。\n后者是将程序</p>\n<blockquote>\n<p>Spawn child process to run user's script under --inspect flag; and use main process to run [[CLI debugger]].</p>\n</blockquote>\n<p>为什么不用官方的<code>--inspect </code> 参数执行？</p>\n<p>方式2：使用vscode</p>\n<p>直接<code>crtl+shift+D</code> 打开调试窗口，创建一个node 的 配置，便会自动调试。</p>\n<p><img src=\"https://picgo1-1300491698.cos.ap-nanjing.myqcloud.com//image-20230222215410212.png\" alt=\"image-20230222215410212\"></p>\n<p>注意：launch 和 attach 的区别 。</p>\n<h3>nextjs 调试</h3>\n<p>https://www.nextjs.cn/docs/advanced-features/debugging</p>"
+  },
+  "_id": "nodejs 调试.md",
+  "_raw": {
+    "sourceFilePath": "nodejs 调试.md",
+    "sourceFileName": "nodejs 调试.md",
+    "sourceFileDir": ".",
+    "contentType": "markdown",
+    "flattenedPath": "nodejs 调试"
+  },
+  "type": "Post",
+  "slug": "nodejs 调试",
+  "path": "nodejs 调试",
+  "filePath": "nodejs 调试.md",
+  "toc": [
+    {
+      "value": "Main Question: 怎么调试下段程序？",
+      "url": "#main-question-怎么调试下段程序",
+      "depth": 2
+    },
+    {
+      "value": "nextjs 调试",
+      "url": "#nextjs-调试",
+      "depth": 3
+    }
+  ],
+  "structuredData": {
+    "@context": "https://schema.org",
+    "@type": "BlogPosting",
+    "image": "/static/images/twitter-card.png",
+    "url": "https://tailwind-nextjs-starter-blog.vercel.app/nodejs 调试"
+  }
+}

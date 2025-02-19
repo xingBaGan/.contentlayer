@@ -1,0 +1,26 @@
+{
+  "tags": [],
+  "body": {
+    "raw": "测试文件",
+    "html": "<p>测试文件</p>"
+  },
+  "_id": "test.md",
+  "_raw": {
+    "sourceFilePath": "test.md",
+    "sourceFileName": "test.md",
+    "sourceFileDir": ".",
+    "contentType": "markdown",
+    "flattenedPath": "test"
+  },
+  "type": "Post",
+  "slug": "test",
+  "path": "test",
+  "filePath": "test.md",
+  "toc": [],
+  "structuredData": {
+    "@context": "https://schema.org",
+    "@type": "BlogPosting",
+    "image": "/static/images/twitter-card.png",
+    "url": "https://tailwind-nextjs-starter-blog.vercel.app/test"
+  }
+}

@@ -1,0 +1,212 @@
+{
+  "cacheItemsMap": {
+    "java 环境安装.md": {
+      "document": {
+        "tags": [],
+        "body": {
+          "raw": "\n1. **访问 Java 官方网站**：\n    \n    - 前往 [Oracle Java 下载页面](https://www.oracle.com/java/technologies/javase-jre8-downloads.html) 或 [OpenJDK 下载页面](https://openjdk.java.net/install/).\n\n配置Java bin 的环境变量\n\n\n验证\n\n```\nPS C:\\Users\\jzj> java -version\njava version \"1.8.0_211\"\nJava(TM) SE Runtime Environment (build 1.8.0_211-b12)\nJava HotSpot(TM) 64-Bit Server VM (build 25.211-b12, mixed mode)\n```\n\n\n\n### 什么是JRE 与 java SE\n#### 1. JRE (Java Runtime Environment)\n\n- **定义**：Java 运行环境（JRE）是用于运行 Java 应用程序的环境。它包含了运行 Java 程序所需的核心库、Java 虚拟机（JVM）和其他组件，但不包括开发工具（如编译器）。\n    \n- **适合**：主要用于用户希望在其计算机上运行 Java 应用程序，但不需要开发 Java 程序的情况。\n    \n- **组件**：\n    \n    - **Java 虚拟机 (JVM)**：负责执行 Java 字节码。\n    - **Java 核心库**：提供了 Java 应用程序的基本功能，如数据结构、输入/输出操作等。\n\n#### 2. Java SE (Java Standard Edition)\n\n- **定义**：Java 标准版（Java SE）是一个开发平台，提供了用于构建和运行 Java 应用程序的完整工具和库。它包括 JRE，并附带了开发工具（如 Java 编译器 `javac` 和其他工具）。\n    \n- **适合**：用于需要开发 Java 应用程序的开发人员。Java SE 提供了丰富的 API 和工具，支持桌面应用程序、Web 应用程序和其他类型的开发。\n    \n- **组件**：\n    \n    - **JDK (Java Development Kit)**：包含 JRE 和开发工具。\n    - **API**：提供丰富的类库和接口，供开发人员使用。\n\n### 总结\n\n- **JRE**：用于运行 Java 程序，只包含运行时环境。\n- **Java SE**：用于开发和运行 Java 程序，包含 JRE 和开发工具。\n\n\n### android 环境安装\n\n[win10下Android Studio和SDK下载、安装和环境变量配置 -_win10里面华为手机模拟器sdk下载-CSDN博客](https://blog.csdn.net/qq_33658730/article/details/78547789)",
+          "html": "<ol>\n<li>\n<p><strong>访问 Java 官方网站</strong>：</p>\n<ul>\n<li>前往 <a href=\"https://www.oracle.com/java/technologies/javase-jre8-downloads.html\">Oracle Java 下载页面</a> 或 <a href=\"https://openjdk.java.net/install/\">OpenJDK 下载页面</a>.</li>\n</ul>\n</li>\n</ol>\n<p>配置Java bin 的环境变量</p>\n<p>验证</p>\n<pre><code>PS C:\\Users\\jzj> java -version\njava version \"1.8.0_211\"\nJava(TM) SE Runtime Environment (build 1.8.0_211-b12)\nJava HotSpot(TM) 64-Bit Server VM (build 25.211-b12, mixed mode)\n</code></pre>\n<h3>什么是JRE 与 java SE</h3>\n<h4>1. JRE (Java Runtime Environment)</h4>\n<ul>\n<li>\n<p><strong>定义</strong>：Java 运行环境（JRE）是用于运行 Java 应用程序的环境。它包含了运行 Java 程序所需的核心库、Java 虚拟机（JVM）和其他组件，但不包括开发工具（如编译器）。</p>\n</li>\n<li>\n<p><strong>适合</strong>：主要用于用户希望在其计算机上运行 Java 应用程序，但不需要开发 Java 程序的情况。</p>\n</li>\n<li>\n<p><strong>组件</strong>：</p>\n<ul>\n<li><strong>Java 虚拟机 (JVM)</strong>：负责执行 Java 字节码。</li>\n<li><strong>Java 核心库</strong>：提供了 Java 应用程序的基本功能，如数据结构、输入/输出操作等。</li>\n</ul>\n</li>\n</ul>\n<h4>2. Java SE (Java Standard Edition)</h4>\n<ul>\n<li>\n<p><strong>定义</strong>：Java 标准版（Java SE）是一个开发平台，提供了用于构建和运行 Java 应用程序的完整工具和库。它包括 JRE，并附带了开发工具（如 Java 编译器 <code>javac</code> 和其他工具）。</p>\n</li>\n<li>\n<p><strong>适合</strong>：用于需要开发 Java 应用程序的开发人员。Java SE 提供了丰富的 API 和工具，支持桌面应用程序、Web 应用程序和其他类型的开发。</p>\n</li>\n<li>\n<p><strong>组件</strong>：</p>\n<ul>\n<li><strong>JDK (Java Development Kit)</strong>：包含 JRE 和开发工具。</li>\n<li><strong>API</strong>：提供丰富的类库和接口，供开发人员使用。</li>\n</ul>\n</li>\n</ul>\n<h3>总结</h3>\n<ul>\n<li><strong>JRE</strong>：用于运行 Java 程序，只包含运行时环境。</li>\n<li><strong>Java SE</strong>：用于开发和运行 Java 程序，包含 JRE 和开发工具。</li>\n</ul>\n<h3>android 环境安装</h3>\n<p><a href=\"https://blog.csdn.net/qq_33658730/article/details/78547789\">win10下Android Studio和SDK下载、安装和环境变量配置 -_win10里面华为手机模拟器sdk下载-CSDN博客</a></p>"
+        },
+        "_id": "java 环境安装.md",
+        "_raw": {
+          "sourceFilePath": "java 环境安装.md",
+          "sourceFileName": "java 环境安装.md",
+          "sourceFileDir": ".",
+          "contentType": "markdown",
+          "flattenedPath": "java 环境安装"
+        },
+        "type": "Post",
+        "slug": "java 环境安装",
+        "path": "java 环境安装",
+        "filePath": "java 环境安装.md",
+        "toc": [
+          {
+            "value": "什么是JRE 与 java SE",
+            "url": "#什么是jre-与-java-se",
+            "depth": 3
+          },
+          {
+            "value": "1. JRE (Java Runtime Environment)",
+            "url": "#1-jre-java-runtime-environment",
+            "depth": 4
+          },
+          {
+            "value": "2. Java SE (Java Standard Edition)",
+            "url": "#2-java-se-java-standard-edition",
+            "depth": 4
+          },
+          {
+            "value": "总结",
+            "url": "#总结",
+            "depth": 3
+          },
+          {
+            "value": "android 环境安装",
+            "url": "#android-环境安装",
+            "depth": 3
+          }
+        ],
+        "structuredData": {
+          "@context": "https://schema.org",
+          "@type": "BlogPosting",
+          "image": "/static/images/twitter-card.png",
+          "url": "https://tailwind-nextjs-starter-blog.vercel.app/java 环境安装"
+        }
+      },
+      "documentHash": "1729926671343",
+      "hasWarnings": false,
+      "documentTypeName": "Post"
+    },
+    "node deep dive.md": {
+      "document": {
+        "tags": [],
+        "body": {
+          "raw": "\n`nodejs` 无法直接与操作系统进行交流,需要通过 v8 的 `c++` binding 来使用调用操作系统API.\n\n汇编语言，根据CPU 会编译为可执行文件。\n`c++`  文件编译为汇编. 再按照汇编的路执行。\n\n\n`javascript` 通过 初代`javascript` 引擎将语言转为二进制。\n\n现代`javascript` 引擎将代码转为 bytecode\n\n",
+          "html": "<p><code>nodejs</code> 无法直接与操作系统进行交流,需要通过 v8 的 <code>c++</code> binding 来使用调用操作系统API.</p>\n<p>汇编语言，根据CPU 会编译为可执行文件。\n<code>c++</code>  文件编译为汇编. 再按照汇编的路执行。</p>\n<p><code>javascript</code> 通过 初代<code>javascript</code> 引擎将语言转为二进制。</p>\n<p>现代<code>javascript</code> 引擎将代码转为 bytecode</p>"
+        },
+        "_id": "node deep dive.md",
+        "_raw": {
+          "sourceFilePath": "node deep dive.md",
+          "sourceFileName": "node deep dive.md",
+          "sourceFileDir": ".",
+          "contentType": "markdown",
+          "flattenedPath": "node deep dive"
+        },
+        "type": "Post",
+        "slug": "node deep dive",
+        "path": "node deep dive",
+        "filePath": "node deep dive.md",
+        "toc": [],
+        "structuredData": {
+          "@context": "https://schema.org",
+          "@type": "BlogPosting",
+          "image": "/static/images/twitter-card.png",
+          "url": "https://tailwind-nextjs-starter-blog.vercel.app/node deep dive"
+        }
+      },
+      "documentHash": "1729926633490",
+      "hasWarnings": false,
+      "documentTypeName": "Post"
+    },
+    "nodejs buffer.md": {
+      "document": {
+        "tags": [],
+        "body": {
+          "raw": "[Node.js buffer: A complete guide - LogRocket Blog](https://blog.logrocket.com/node-js-buffer-complete-guide/#what-node-js-buffer)\n\n### 为啥需要buffer\n二进制数据巨大，处理进程一次只能处理一部分，其余的数据被存储在buffer中，被处理进程处理\n\n### buffer class in `nodejs`\n`nodejs` 在接收网络传输的数据时，需要将而精致数据存储在内存中，直到接收者处理它。\nclass 可以在javascirpt 中进行处理。\n\n## buffer 方法\n\n* `alloc` n字节的buffer  `Buffer.alloc`\n*  写入文本数据  `Buffer.write()`\n* 写入数据\n\t* 写入8 bit数 buffer.writeInt8( number, offset ) ,  0<= offset  下标从零开始\n*  `compare` 返回对比值\n*  `concat`\n*  `entries()` 返回可遍历的字节数\n*  `fill()` 类似于`write()` 重复填入，直到满\n*  `from()` 可以将字符串变为buffer  等价于 `alloc() write()`  二进制数组\n*  `includes()` \n* `isEncoding()` 确定coding type\n* `slice()`\n\n\n* `allocUnsafe`  ",
+          "html": "<p><a href=\"https://blog.logrocket.com/node-js-buffer-complete-guide/#what-node-js-buffer\">Node.js buffer: A complete guide - LogRocket Blog</a></p>\n<h3>为啥需要buffer</h3>\n<p>二进制数据巨大，处理进程一次只能处理一部分，其余的数据被存储在buffer中，被处理进程处理</p>\n<h3>buffer class in <code>nodejs</code></h3>\n<p><code>nodejs</code> 在接收网络传输的数据时，需要将而精致数据存储在内存中，直到接收者处理它。\nclass 可以在javascirpt 中进行处理。</p>\n<h2>buffer 方法</h2>\n<ul>\n<li>\n<p><code>alloc</code> n字节的buffer  <code>Buffer.alloc</code></p>\n</li>\n<li>\n<p>写入文本数据  <code>Buffer.write()</code></p>\n</li>\n<li>\n<p>写入数据</p>\n<ul>\n<li>写入8 bit数 buffer.writeInt8( number, offset ) ,  0&#x3C;= offset  下标从零开始</li>\n</ul>\n</li>\n<li>\n<p><code>compare</code> 返回对比值</p>\n</li>\n<li>\n<p><code>concat</code></p>\n</li>\n<li>\n<p><code>entries()</code> 返回可遍历的字节数</p>\n</li>\n<li>\n<p><code>fill()</code> 类似于<code>write()</code> 重复填入，直到满</p>\n</li>\n<li>\n<p><code>from()</code> 可以将字符串变为buffer  等价于 <code>alloc() write()</code>  二进制数组</p>\n</li>\n<li>\n<p><code>includes()</code></p>\n</li>\n<li>\n<p><code>isEncoding()</code> 确定coding type</p>\n</li>\n<li>\n<p><code>slice()</code></p>\n</li>\n<li>\n<p><code>allocUnsafe</code></p>\n</li>\n</ul>"
+        },
+        "_id": "nodejs buffer.md",
+        "_raw": {
+          "sourceFilePath": "nodejs buffer.md",
+          "sourceFileName": "nodejs buffer.md",
+          "sourceFileDir": ".",
+          "contentType": "markdown",
+          "flattenedPath": "nodejs buffer"
+        },
+        "type": "Post",
+        "slug": "nodejs buffer",
+        "path": "nodejs buffer",
+        "filePath": "nodejs buffer.md",
+        "toc": [
+          {
+            "value": "为啥需要buffer",
+            "url": "#为啥需要buffer",
+            "depth": 3
+          },
+          {
+            "value": "buffer class in nodejs",
+            "url": "#buffer-class-in-nodejs",
+            "depth": 3
+          },
+          {
+            "value": "buffer 方法",
+            "url": "#buffer-方法",
+            "depth": 2
+          }
+        ],
+        "structuredData": {
+          "@context": "https://schema.org",
+          "@type": "BlogPosting",
+          "image": "/static/images/twitter-card.png",
+          "url": "https://tailwind-nextjs-starter-blog.vercel.app/nodejs buffer"
+        }
+      },
+      "documentHash": "1729926633936",
+      "hasWarnings": false,
+      "documentTypeName": "Post"
+    },
+    "nodejs 调试.md": {
+      "document": {
+        "tags": [],
+        "body": {
+          "raw": "* [让你 nodejs 水平暴增的 debugger 技巧 - 知乎 (zhihu.com)](https://zhuanlan.zhihu.com/p/387270007)\n* *[Debugging - Getting Started | Node.js (nodejs.org)](https://nodejs.org/en/docs/guides/debugging-getting-started/)\n\n\n## Main Question: 怎么调试下段程序？\n``` javascript\nfunction sum(a, b) {\n  return a + b;\n}\n\nlet result = sum(2,3);\n```\n\n\n\n> When started with the `--inspect` switch, a Node.js process listens for a debugging client. By default, it will listen at host and port 127.0.0.1:9229. Each process is also assigned a unique [[[UUID]]](https://tools.ietf.org/html/rfc4122).\n\n[Debugging - Getting Started | Node.js (nodejs.org)](https://nodejs.org/en/docs/guides/debugging-getting-started/#Inspector%20Clients)\n1. 打开 Node.js Inspector。\n2. 使用  Inspector Clients 连接 \n\n方式一：chrome inspector clinets 连接。\n直接使用 node `--inpect-brk`  script.js  或者 node inspect script.js\n打开浏览器 `F12`  点击左上角图标。\n\n\n\n![image-20230222213126798](https://picgo1-1300491698.cos.ap-nanjing.myqcloud.com//image-20230222213126798.png)\n之后可在source 中调试web 程序一般。\n\n前者是自动断点程序程序执行。\n后者是将程序\n>  Spawn child process to run user's script under --inspect flag; and use main process to run [[CLI debugger]].\n\n\n为什么不用官方的`--inspect ` 参数执行？\n\n方式2：使用vscode\n\n直接`crtl+shift+D` 打开调试窗口，创建一个node 的 配置，便会自动调试。\n\n![image-20230222215410212](https://picgo1-1300491698.cos.ap-nanjing.myqcloud.com//image-20230222215410212.png)\n\n注意：launch 和 attach 的区别 。\n\n\n### nextjs 调试\n\n\nhttps://www.nextjs.cn/docs/advanced-features/debugging",
+          "html": "<ul>\n<li><a href=\"https://zhuanlan.zhihu.com/p/387270007\">让你 nodejs 水平暴增的 debugger 技巧 - 知乎 (zhihu.com)</a></li>\n<li>*<a href=\"https://nodejs.org/en/docs/guides/debugging-getting-started/\">Debugging - Getting Started | Node.js (nodejs.org)</a></li>\n</ul>\n<h2>Main Question: 怎么调试下段程序？</h2>\n<pre><code class=\"language-javascript\">function sum(a, b) {\n  return a + b;\n}\n\nlet result = sum(2,3);\n</code></pre>\n<blockquote>\n<p>When started with the <code>--inspect</code> switch, a Node.js process listens for a debugging client. By default, it will listen at host and port 127.0.0.1:9229. Each process is also assigned a unique <a href=\"https://tools.ietf.org/html/rfc4122\">[[UUID]]</a>.</p>\n</blockquote>\n<p><a href=\"https://nodejs.org/en/docs/guides/debugging-getting-started/#Inspector%20Clients\">Debugging - Getting Started | Node.js (nodejs.org)</a></p>\n<ol>\n<li>打开 Node.js Inspector。</li>\n<li>使用  Inspector Clients 连接</li>\n</ol>\n<p>方式一：chrome inspector clinets 连接。\n直接使用 node <code>--inpect-brk</code>  script.js  或者 node inspect script.js\n打开浏览器 <code>F12</code>  点击左上角图标。</p>\n<p><img src=\"https://picgo1-1300491698.cos.ap-nanjing.myqcloud.com//image-20230222213126798.png\" alt=\"image-20230222213126798\">\n之后可在source 中调试web 程序一般。</p>\n<p>前者是自动断点程序程序执行。\n后者是将程序</p>\n<blockquote>\n<p>Spawn child process to run user's script under --inspect flag; and use main process to run [[CLI debugger]].</p>\n</blockquote>\n<p>为什么不用官方的<code>--inspect </code> 参数执行？</p>\n<p>方式2：使用vscode</p>\n<p>直接<code>crtl+shift+D</code> 打开调试窗口，创建一个node 的 配置，便会自动调试。</p>\n<p><img src=\"https://picgo1-1300491698.cos.ap-nanjing.myqcloud.com//image-20230222215410212.png\" alt=\"image-20230222215410212\"></p>\n<p>注意：launch 和 attach 的区别 。</p>\n<h3>nextjs 调试</h3>\n<p>https://www.nextjs.cn/docs/advanced-features/debugging</p>"
+        },
+        "_id": "nodejs 调试.md",
+        "_raw": {
+          "sourceFilePath": "nodejs 调试.md",
+          "sourceFileName": "nodejs 调试.md",
+          "sourceFileDir": ".",
+          "contentType": "markdown",
+          "flattenedPath": "nodejs 调试"
+        },
+        "type": "Post",
+        "slug": "nodejs 调试",
+        "path": "nodejs 调试",
+        "filePath": "nodejs 调试.md",
+        "toc": [
+          {
+            "value": "Main Question: 怎么调试下段程序？",
+            "url": "#main-question-怎么调试下段程序",
+            "depth": 2
+          },
+          {
+            "value": "nextjs 调试",
+            "url": "#nextjs-调试",
+            "depth": 3
+          }
+        ],
+        "structuredData": {
+          "@context": "https://schema.org",
+          "@type": "BlogPosting",
+          "image": "/static/images/twitter-card.png",
+          "url": "https://tailwind-nextjs-starter-blog.vercel.app/nodejs 调试"
+        }
+      },
+      "documentHash": "1701827296453",
+      "hasWarnings": false,
+      "documentTypeName": "Post"
+    },
+    "UUID.md": {
+      "document": {
+        "tags": [],
+        "body": {
+          "raw": "\nUUID: 跨越时间空间的的主键。32 位 16 进制: 8 - 4 - 4 - 4 - 122",
+          "html": "<p>UUID: 跨越时间空间的的主键。32 位 16 进制: 8 - 4 - 4 - 4 - 122</p>"
+        },
+        "_id": "UUID.md",
+        "_raw": {
+          "sourceFilePath": "UUID.md",
+          "sourceFileName": "UUID.md",
+          "sourceFileDir": ".",
+          "contentType": "markdown",
+          "flattenedPath": "UUID"
+        },
+        "type": "Post",
+        "slug": "UUID",
+        "path": "UUID",
+        "filePath": "UUID.md",
+        "toc": [],
+        "structuredData": {
+          "@context": "https://schema.org",
+          "@type": "BlogPosting",
+          "image": "/static/images/twitter-card.png",
+          "url": "https://tailwind-nextjs-starter-blog.vercel.app/UUID"
+        }
+      },
+      "documentHash": "1701827326810",
+      "hasWarnings": false,
+      "documentTypeName": "Post"
+    }
+  }
+}

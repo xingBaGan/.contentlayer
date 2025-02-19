@@ -1,0 +1,37 @@
+{
+  "tags": [],
+  "body": {
+    "raw": "# 数据大屏总结\n\n相关链接\n\n* [从0到1开发可视化数据大屏（上） - 掘金 (juejin.cn)](https://juejin.cn/post/6931708519976534029#heading-1) ==> 介绍了拖拽形成数据大屏\n* [初识 D3.js ：打造专属可视化 - 掘金 (juejin.cn)](https://juejin.cn/post/6916703936661585933)\n* [Highcharts-1-入门介绍 - 掘金 (juejin.cn)](https://juejin.cn/post/6926923159035871245)\n\n## 图表框架选择\n\n常见的框架由 [`ECharts`](https://echarts.apache.org/en/api.html#echarts)与 `Highcharts` 或则 [`d3js`](https://www.d3js.org.cn/)\n\n\n\n`echarts`\n\n样例较多，就是\n",
+    "html": "<h1>数据大屏总结</h1>\n<p>相关链接</p>\n<ul>\n<li><a href=\"https://juejin.cn/post/6931708519976534029#heading-1\">从0到1开发可视化数据大屏（上） - 掘金 (juejin.cn)</a> ==> 介绍了拖拽形成数据大屏</li>\n<li><a href=\"https://juejin.cn/post/6916703936661585933\">初识 D3.js ：打造专属可视化 - 掘金 (juejin.cn)</a></li>\n<li><a href=\"https://juejin.cn/post/6926923159035871245\">Highcharts-1-入门介绍 - 掘金 (juejin.cn)</a></li>\n</ul>\n<h2>图表框架选择</h2>\n<p>常见的框架由 <a href=\"https://echarts.apache.org/en/api.html#echarts\"><code>ECharts</code></a>与 <code>Highcharts</code> 或则 <a href=\"https://www.d3js.org.cn/\"><code>d3js</code></a></p>\n<p><code>echarts</code></p>\n<p>样例较多，就是</p>"
+  },
+  "_id": "怎么做数据大屏.md",
+  "_raw": {
+    "sourceFilePath": "怎么做数据大屏.md",
+    "sourceFileName": "怎么做数据大屏.md",
+    "sourceFileDir": ".",
+    "contentType": "markdown",
+    "flattenedPath": "怎么做数据大屏"
+  },
+  "type": "Post",
+  "slug": "怎么做数据大屏",
+  "path": "怎么做数据大屏",
+  "filePath": "怎么做数据大屏.md",
+  "toc": [
+    {
+      "value": "数据大屏总结",
+      "url": "#数据大屏总结",
+      "depth": 1
+    },
+    {
+      "value": "图表框架选择",
+      "url": "#图表框架选择",
+      "depth": 2
+    }
+  ],
+  "structuredData": {
+    "@context": "https://schema.org",
+    "@type": "BlogPosting",
+    "image": "/static/images/twitter-card.png",
+    "url": "https://tailwind-nextjs-starter-blog.vercel.app/怎么做数据大屏"
+  }
+}

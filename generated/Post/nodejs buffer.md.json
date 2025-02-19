@@ -1,0 +1,42 @@
+{
+  "tags": [],
+  "body": {
+    "raw": "[Node.js buffer: A complete guide - LogRocket Blog](https://blog.logrocket.com/node-js-buffer-complete-guide/#what-node-js-buffer)\n\n### 为啥需要buffer\n二进制数据巨大，处理进程一次只能处理一部分，其余的数据被存储在buffer中，被处理进程处理\n\n### buffer class in `nodejs`\n`nodejs` 在接收网络传输的数据时，需要将而精致数据存储在内存中，直到接收者处理它。\nclass 可以在javascirpt 中进行处理。\n\n## buffer 方法\n\n* `alloc` n字节的buffer  `Buffer.alloc`\n*  写入文本数据  `Buffer.write()`\n* 写入数据\n\t* 写入8 bit数 buffer.writeInt8( number, offset ) ,  0<= offset  下标从零开始\n*  `compare` 返回对比值\n*  `concat`\n*  `entries()` 返回可遍历的字节数\n*  `fill()` 类似于`write()` 重复填入，直到满\n*  `from()` 可以将字符串变为buffer  等价于 `alloc() write()`  二进制数组\n*  `includes()` \n* `isEncoding()` 确定coding type\n* `slice()`\n\n\n* `allocUnsafe`  ",
+    "html": "<p><a href=\"https://blog.logrocket.com/node-js-buffer-complete-guide/#what-node-js-buffer\">Node.js buffer: A complete guide - LogRocket Blog</a></p>\n<h3>为啥需要buffer</h3>\n<p>二进制数据巨大，处理进程一次只能处理一部分，其余的数据被存储在buffer中，被处理进程处理</p>\n<h3>buffer class in <code>nodejs</code></h3>\n<p><code>nodejs</code> 在接收网络传输的数据时，需要将而精致数据存储在内存中，直到接收者处理它。\nclass 可以在javascirpt 中进行处理。</p>\n<h2>buffer 方法</h2>\n<ul>\n<li>\n<p><code>alloc</code> n字节的buffer  <code>Buffer.alloc</code></p>\n</li>\n<li>\n<p>写入文本数据  <code>Buffer.write()</code></p>\n</li>\n<li>\n<p>写入数据</p>\n<ul>\n<li>写入8 bit数 buffer.writeInt8( number, offset ) ,  0&#x3C;= offset  下标从零开始</li>\n</ul>\n</li>\n<li>\n<p><code>compare</code> 返回对比值</p>\n</li>\n<li>\n<p><code>concat</code></p>\n</li>\n<li>\n<p><code>entries()</code> 返回可遍历的字节数</p>\n</li>\n<li>\n<p><code>fill()</code> 类似于<code>write()</code> 重复填入，直到满</p>\n</li>\n<li>\n<p><code>from()</code> 可以将字符串变为buffer  等价于 <code>alloc() write()</code>  二进制数组</p>\n</li>\n<li>\n<p><code>includes()</code></p>\n</li>\n<li>\n<p><code>isEncoding()</code> 确定coding type</p>\n</li>\n<li>\n<p><code>slice()</code></p>\n</li>\n<li>\n<p><code>allocUnsafe</code></p>\n</li>\n</ul>"
+  },
+  "_id": "nodejs buffer.md",
+  "_raw": {
+    "sourceFilePath": "nodejs buffer.md",
+    "sourceFileName": "nodejs buffer.md",
+    "sourceFileDir": ".",
+    "contentType": "markdown",
+    "flattenedPath": "nodejs buffer"
+  },
+  "type": "Post",
+  "slug": "nodejs buffer",
+  "path": "nodejs buffer",
+  "filePath": "nodejs buffer.md",
+  "toc": [
+    {
+      "value": "为啥需要buffer",
+      "url": "#为啥需要buffer",
+      "depth": 3
+    },
+    {
+      "value": "buffer class in nodejs",
+      "url": "#buffer-class-in-nodejs",
+      "depth": 3
+    },
+    {
+      "value": "buffer 方法",
+      "url": "#buffer-方法",
+      "depth": 2
+    }
+  ],
+  "structuredData": {
+    "@context": "https://schema.org",
+    "@type": "BlogPosting",
+    "image": "/static/images/twitter-card.png",
+    "url": "https://tailwind-nextjs-starter-blog.vercel.app/nodejs buffer"
+  }
+}

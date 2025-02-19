@@ -1,0 +1,72 @@
+{
+  "tags": [],
+  "body": {
+    "raw": "## echart 基本架构\n\necharts  使用 zrender 根据不同浏览器，来使用不同方式绘制。\n\n![image-20210902102607617](https://picgo1-1300491698.cos.ap-nanjing.myqcloud.com//image-20210902102607617.png)\n\n## [zrender](https://ecomfe.github.io/zrender-doc/public/)\n\n类似于canvas 的依赖，你直接\n\n```js\nvar zr = zrender.init(document.getElementById('main'));\n//绘制图形\nvar circle = new zrender.Circle({\n    shape: {\n        cx: 150,\n        cy: 50,\n        r: 40\n    },\n    style: {\n        fill: 'none',\n        stroke: '#F00'\n    }\n});\n//将图形渲染到画布上\nzr.add(circle);\n//更新模型\ncircle.attr('shape', {\n    r: 50 // 只更新 r。cx、cy 将保持不变。\n});\n//echarts 自己重新绘制\n```\n\nIt is better to specify your canvas dimensions by setting the `width` and `height` attributes directly on the `<canvas>` elements 。 直接设置css 的宽高，会使echarts得变形。\n\n然而 zrender 提过的元素并不会因为通过css 设置而变形。\n\n#### zrender 在 echarts 起到的作用\n\n①echart 通过创建zrender 创建各种形状，再根据各种形状创建各种图例。\n\n②zrender 统一各种**平台**的事件。 \n\n![image-20210902115032954](https://picgo1-1300491698.cos.ap-nanjing.myqcloud.com//image-20210902115032954.png)\n\nzender 作为一个2d 绘制引擎。\n\n![image-20210902115148029](https://picgo1-1300491698.cos.ap-nanjing.myqcloud.com//image-20210902115148029.png)\n\n## 系列与组件\n\n对于图形元素的抽象不 足以构建图表，需要再次抽象。\n\n![image-20210902122359112](https://picgo1-1300491698.cos.ap-nanjing.myqcloud.com//image-20210902122359112.png)\n\nseries 的职责是负责各种图表元素，绘制的图形\n\n其他统称为components.\n\necharts 通过 options 【用户的输入来绘制部疼痛的组件以及series】，从而达到绘制整个chart.\n\n![image-20210902123118410](https://picgo1-1300491698.cos.ap-nanjing.myqcloud.com//image-20210902123118410.png)\n\n目录结构\n\n![image-20210902132919157](https://picgo1-1300491698.cos.ap-nanjing.myqcloud.com//image-20210902132919157.png)\n\n需要维护chart 状态【因为需要交互】\n\n使用model (维护用户输入与组件数据状态)与view【更新生成图形元素】 进行抽象。\n\n>  在下次更新options的时候，他会进行merge数据操作\n\n:eye: XxxModel.js / XssSeries.js 或者 XxxView.js \n\nGlobalModel  (ecModel)单一示例，管理所有Model  \n\n### 为什么需要状态？\n\n直接图形进行绘制【只有view 层】，通过事件直接触发图形绘制不就好了？引入model 层为了，在下次也能按照保存(state) 来重现view 层【即将绘制view 层的各种状态抽离】。\n\ncontroller : 控制器作用于模型和视图上。它控制数据流向模型对象，并在数据变化时更新视图。它使视图与模型分离开。 控制层是为了保证view 层与 model 层保持状态同步。【然而你直接将view更新交给model 层，将事件处理交给view 不就好了(涉及监听者模式)】。\n\n然后通过事件触发action 从而使得model 改变，进而同步 view 层。\n\nMVC 更普遍存在于后端，现在前端多是MVVM .\n\n:warning: 对于一个事件，你点击扇区，该扇区弹出【朴素,直接调用attr（直接改变图形内容）】。但是model 中状态【例如选中状态】没有更新.\n\n或者下次更新时也会造成状态覆盖等问题。 \n\n> 以数据为中心，通过事件改变数据，数据改变就会直接触发view 改变【同步】。单向数据流，引入了action，\n>\n> 来定义各种行为，方便各种数据改变的记录。进一步的各种actions就是对应的methods(mutations), 各种mothods 去改变数据。\n\n![image-20210902140537352](https://picgo1-1300491698.cos.ap-nanjing.myqcloud.com//image-20210902140537352.png)\n\n![image-20210902134356010](https://picgo1-1300491698.cos.ap-nanjing.myqcloud.com//image-20210902134356010.png)\n\nMessage center 管理所有事件。而不是各个组件相互发送消息。\n\nview 中必须知道其中组件的存在，才能去监听该组件的事件。【强耦合状态】\n\n现在是通过点击，发送一个action ,然后更新state , 再去重新绘制。\n\n## 数据到点的映射与坐标系\n\n![image-20210902144935775](https://picgo1-1300491698.cos.ap-nanjing.myqcloud.com//image-20210902144935775.png)\n\n![image-20210902145200041](https://picgo1-1300491698.cos.ap-nanjing.myqcloud.com//image-20210902145200041.png)\n\n##  echarts 5.X 源码分析\n\n![image-20210902151531442](https://picgo1-1300491698.cos.ap-nanjing.myqcloud.com//image-20210902151531442.png)\n\n[想要自己绘制图形](https://echarts.apache.org/zh/api.html#echarts.graphic)\n\n参考zrender 文档\n\n```\n...\nimport ChartView from '../view/Chart';\nimport * as graphic from '../util/graphic'; ==> 发现该文件引人了大量的zrender 图形绘制\n..\n```\n\n\n\n####  [echarts.](https://echarts.apache.org/zh/api.html#echarts)[graphic.](https://echarts.apache.org/zh/api.html#echarts.graphic) [extendShape](https://echarts.apache.org/zh/api.html#echarts.graphic.extendShape)\n\n```\nimport Path from 'zrender/lib/graphic/Path';\n...\nexport function extendShape(opts) {\n  return Path.extend(opts);\n}\n```\n\n[Path.extend](https://ecomfe.github.io/zrender-doc/public/api.html#zrenderpathextendprops) 扩展一个 `Path` 元素，用以生成比如星形，圆等。\n\ndemo: https://github.com/ecomfe/zrender/blob/master/test/pin.html\n\n##  echarts 中的使用自定义图形  \n\n 注册的 class，可以被用于 [自定义系列（custom series）](https://echarts.apache.org/zh/option.html#series-custom) 和 [图形组件（graphic component）](https://echarts.apache.org/zh/option.html#graphic)，声明 `{type: name}` 即可。\n\n```\n    ...,\n    graphic: [\n        { // 一个图形元素，类型是 image。\n            type: 'image',\n            ...\n        },\n        { // 一个图形元素，类型是 text，指定了 id。\n            type: 'text',\n            id: 'text1',\n            ...\n        },\n        { // 一个图形元素，类型是 group，可以嵌套子节点。\n            type: 'group',\n            children: [\n                {\n                    type: 'rect',\n                    id: 'rect1',\n                    ...\n                },\n                {\n                    type: 'image',\n                    ...\n                },\n                ...\n            ]\n        }\n        ...\n    ]\n});\n```\n\n通过这些可以在图表上自定义组件",
+    "html": "<h2>echart 基本架构</h2>\n<p>echarts  使用 zrender 根据不同浏览器，来使用不同方式绘制。</p>\n<p><img src=\"https://picgo1-1300491698.cos.ap-nanjing.myqcloud.com//image-20210902102607617.png\" alt=\"image-20210902102607617\"></p>\n<h2><a href=\"https://ecomfe.github.io/zrender-doc/public/\">zrender</a></h2>\n<p>类似于canvas 的依赖，你直接</p>\n<pre><code class=\"language-js\">var zr = zrender.init(document.getElementById('main'));\n//绘制图形\nvar circle = new zrender.Circle({\n    shape: {\n        cx: 150,\n        cy: 50,\n        r: 40\n    },\n    style: {\n        fill: 'none',\n        stroke: '#F00'\n    }\n});\n//将图形渲染到画布上\nzr.add(circle);\n//更新模型\ncircle.attr('shape', {\n    r: 50 // 只更新 r。cx、cy 将保持不变。\n});\n//echarts 自己重新绘制\n</code></pre>\n<p>It is better to specify your canvas dimensions by setting the <code>width</code> and <code>height</code> attributes directly on the <code>&#x3C;canvas></code> elements 。 直接设置css 的宽高，会使echarts得变形。</p>\n<p>然而 zrender 提过的元素并不会因为通过css 设置而变形。</p>\n<h4>zrender 在 echarts 起到的作用</h4>\n<p>①echart 通过创建zrender 创建各种形状，再根据各种形状创建各种图例。</p>\n<p>②zrender 统一各种<strong>平台</strong>的事件。</p>\n<p><img src=\"https://picgo1-1300491698.cos.ap-nanjing.myqcloud.com//image-20210902115032954.png\" alt=\"image-20210902115032954\"></p>\n<p>zender 作为一个2d 绘制引擎。</p>\n<p><img src=\"https://picgo1-1300491698.cos.ap-nanjing.myqcloud.com//image-20210902115148029.png\" alt=\"image-20210902115148029\"></p>\n<h2>系列与组件</h2>\n<p>对于图形元素的抽象不 足以构建图表，需要再次抽象。</p>\n<p><img src=\"https://picgo1-1300491698.cos.ap-nanjing.myqcloud.com//image-20210902122359112.png\" alt=\"image-20210902122359112\"></p>\n<p>series 的职责是负责各种图表元素，绘制的图形</p>\n<p>其他统称为components.</p>\n<p>echarts 通过 options 【用户的输入来绘制部疼痛的组件以及series】，从而达到绘制整个chart.</p>\n<p><img src=\"https://picgo1-1300491698.cos.ap-nanjing.myqcloud.com//image-20210902123118410.png\" alt=\"image-20210902123118410\"></p>\n<p>目录结构</p>\n<p><img src=\"https://picgo1-1300491698.cos.ap-nanjing.myqcloud.com//image-20210902132919157.png\" alt=\"image-20210902132919157\"></p>\n<p>需要维护chart 状态【因为需要交互】</p>\n<p>使用model (维护用户输入与组件数据状态)与view【更新生成图形元素】 进行抽象。</p>\n<blockquote>\n<p>在下次更新options的时候，他会进行merge数据操作</p>\n</blockquote>\n<p>:eye: XxxModel.js / XssSeries.js 或者 XxxView.js</p>\n<p>GlobalModel  (ecModel)单一示例，管理所有Model</p>\n<h3>为什么需要状态？</h3>\n<p>直接图形进行绘制【只有view 层】，通过事件直接触发图形绘制不就好了？引入model 层为了，在下次也能按照保存(state) 来重现view 层【即将绘制view 层的各种状态抽离】。</p>\n<p>controller : 控制器作用于模型和视图上。它控制数据流向模型对象，并在数据变化时更新视图。它使视图与模型分离开。 控制层是为了保证view 层与 model 层保持状态同步。【然而你直接将view更新交给model 层，将事件处理交给view 不就好了(涉及监听者模式)】。</p>\n<p>然后通过事件触发action 从而使得model 改变，进而同步 view 层。</p>\n<p>MVC 更普遍存在于后端，现在前端多是MVVM .</p>\n<p>:warning: 对于一个事件，你点击扇区，该扇区弹出【朴素,直接调用attr（直接改变图形内容）】。但是model 中状态【例如选中状态】没有更新.</p>\n<p>或者下次更新时也会造成状态覆盖等问题。</p>\n<blockquote>\n<p>以数据为中心，通过事件改变数据，数据改变就会直接触发view 改变【同步】。单向数据流，引入了action，</p>\n<p>来定义各种行为，方便各种数据改变的记录。进一步的各种actions就是对应的methods(mutations), 各种mothods 去改变数据。</p>\n</blockquote>\n<p><img src=\"https://picgo1-1300491698.cos.ap-nanjing.myqcloud.com//image-20210902140537352.png\" alt=\"image-20210902140537352\"></p>\n<p><img src=\"https://picgo1-1300491698.cos.ap-nanjing.myqcloud.com//image-20210902134356010.png\" alt=\"image-20210902134356010\"></p>\n<p>Message center 管理所有事件。而不是各个组件相互发送消息。</p>\n<p>view 中必须知道其中组件的存在，才能去监听该组件的事件。【强耦合状态】</p>\n<p>现在是通过点击，发送一个action ,然后更新state , 再去重新绘制。</p>\n<h2>数据到点的映射与坐标系</h2>\n<p><img src=\"https://picgo1-1300491698.cos.ap-nanjing.myqcloud.com//image-20210902144935775.png\" alt=\"image-20210902144935775\"></p>\n<p><img src=\"https://picgo1-1300491698.cos.ap-nanjing.myqcloud.com//image-20210902145200041.png\" alt=\"image-20210902145200041\"></p>\n<h2>echarts 5.X 源码分析</h2>\n<p><img src=\"https://picgo1-1300491698.cos.ap-nanjing.myqcloud.com//image-20210902151531442.png\" alt=\"image-20210902151531442\"></p>\n<p><a href=\"https://echarts.apache.org/zh/api.html#echarts.graphic\">想要自己绘制图形</a></p>\n<p>参考zrender 文档</p>\n<pre><code>...\nimport ChartView from '../view/Chart';\nimport * as graphic from '../util/graphic'; ==> 发现该文件引人了大量的zrender 图形绘制\n..\n</code></pre>\n<h4><a href=\"https://echarts.apache.org/zh/api.html#echarts\">echarts.</a><a href=\"https://echarts.apache.org/zh/api.html#echarts.graphic\">graphic.</a> <a href=\"https://echarts.apache.org/zh/api.html#echarts.graphic.extendShape\">extendShape</a></h4>\n<pre><code>import Path from 'zrender/lib/graphic/Path';\n...\nexport function extendShape(opts) {\n  return Path.extend(opts);\n}\n</code></pre>\n<p><a href=\"https://ecomfe.github.io/zrender-doc/public/api.html#zrenderpathextendprops\">Path.extend</a> 扩展一个 <code>Path</code> 元素，用以生成比如星形，圆等。</p>\n<p>demo: https://github.com/ecomfe/zrender/blob/master/test/pin.html</p>\n<h2>echarts 中的使用自定义图形</h2>\n<p>注册的 class，可以被用于 <a href=\"https://echarts.apache.org/zh/option.html#series-custom\">自定义系列（custom series）</a> 和 <a href=\"https://echarts.apache.org/zh/option.html#graphic\">图形组件（graphic component）</a>，声明 <code>{type: name}</code> 即可。</p>\n<pre><code>    ...,\n    graphic: [\n        { // 一个图形元素，类型是 image。\n            type: 'image',\n            ...\n        },\n        { // 一个图形元素，类型是 text，指定了 id。\n            type: 'text',\n            id: 'text1',\n            ...\n        },\n        { // 一个图形元素，类型是 group，可以嵌套子节点。\n            type: 'group',\n            children: [\n                {\n                    type: 'rect',\n                    id: 'rect1',\n                    ...\n                },\n                {\n                    type: 'image',\n                    ...\n                },\n                ...\n            ]\n        }\n        ...\n    ]\n});\n</code></pre>\n<p>通过这些可以在图表上自定义组件</p>"
+  },
+  "_id": "echarts 源码解析.md",
+  "_raw": {
+    "sourceFilePath": "echarts 源码解析.md",
+    "sourceFileName": "echarts 源码解析.md",
+    "sourceFileDir": ".",
+    "contentType": "markdown",
+    "flattenedPath": "echarts 源码解析"
+  },
+  "type": "Post",
+  "slug": "echarts 源码解析",
+  "path": "echarts 源码解析",
+  "filePath": "echarts 源码解析.md",
+  "toc": [
+    {
+      "value": "echart 基本架构",
+      "url": "#echart-基本架构",
+      "depth": 2
+    },
+    {
+      "value": "zrender",
+      "url": "#zrender",
+      "depth": 2
+    },
+    {
+      "value": "zrender 在 echarts 起到的作用",
+      "url": "#zrender-在-echarts-起到的作用",
+      "depth": 4
+    },
+    {
+      "value": "系列与组件",
+      "url": "#系列与组件",
+      "depth": 2
+    },
+    {
+      "value": "为什么需要状态？",
+      "url": "#为什么需要状态",
+      "depth": 3
+    },
+    {
+      "value": "数据到点的映射与坐标系",
+      "url": "#数据到点的映射与坐标系",
+      "depth": 2
+    },
+    {
+      "value": "echarts 5.X 源码分析",
+      "url": "#echarts-5x-源码分析",
+      "depth": 2
+    },
+    {
+      "value": "echarts.graphic. extendShape",
+      "url": "#echartsgraphic-extendshape",
+      "depth": 4
+    },
+    {
+      "value": "echarts 中的使用自定义图形",
+      "url": "#echarts-中的使用自定义图形",
+      "depth": 2
+    }
+  ],
+  "structuredData": {
+    "@context": "https://schema.org",
+    "@type": "BlogPosting",
+    "image": "/static/images/twitter-card.png",
+    "url": "https://tailwind-nextjs-starter-blog.vercel.app/echarts 源码解析"
+  }
+}

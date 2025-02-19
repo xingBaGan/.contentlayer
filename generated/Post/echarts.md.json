@@ -1,0 +1,32 @@
+{
+  "tags": [],
+  "body": {
+    "raw": "··![image-20210819133722092](https://picgo1-1300491698.cos.ap-nanjing.myqcloud.com//image-20210819133722092.png)\n\n![image-20210819133837790](https://picgo1-1300491698.cos.ap-nanjing.myqcloud.com//image-20210819133837790.png)\n\n![image-20210819133920518](https://picgo1-1300491698.cos.ap-nanjing.myqcloud.com//image-20210819133920518.png)\n\n![image-20210819135648734](https://picgo1-1300491698.cos.ap-nanjing.myqcloud.com//image-20210819135648734.png)\n\n## 自定义表单\n\nCommonly used styles of ECharts, like shadow, opacity, color, border-color, border-width, and etc., are set by [itemStyle](https://echarts.apache.org/en/tutorial.html#series-pie.itemStyle) in series.\n\n",
+    "html": "<p>··<img src=\"https://picgo1-1300491698.cos.ap-nanjing.myqcloud.com//image-20210819133722092.png\" alt=\"image-20210819133722092\"></p>\n<p><img src=\"https://picgo1-1300491698.cos.ap-nanjing.myqcloud.com//image-20210819133837790.png\" alt=\"image-20210819133837790\"></p>\n<p><img src=\"https://picgo1-1300491698.cos.ap-nanjing.myqcloud.com//image-20210819133920518.png\" alt=\"image-20210819133920518\"></p>\n<p><img src=\"https://picgo1-1300491698.cos.ap-nanjing.myqcloud.com//image-20210819135648734.png\" alt=\"image-20210819135648734\"></p>\n<h2>自定义表单</h2>\n<p>Commonly used styles of ECharts, like shadow, opacity, color, border-color, border-width, and etc., are set by <a href=\"https://echarts.apache.org/en/tutorial.html#series-pie.itemStyle\">itemStyle</a> in series.</p>"
+  },
+  "_id": "echarts.md",
+  "_raw": {
+    "sourceFilePath": "echarts.md",
+    "sourceFileName": "echarts.md",
+    "sourceFileDir": ".",
+    "contentType": "markdown",
+    "flattenedPath": "echarts"
+  },
+  "type": "Post",
+  "slug": "echarts",
+  "path": "echarts",
+  "filePath": "echarts.md",
+  "toc": [
+    {
+      "value": "自定义表单",
+      "url": "#自定义表单",
+      "depth": 2
+    }
+  ],
+  "structuredData": {
+    "@context": "https://schema.org",
+    "@type": "BlogPosting",
+    "image": "/static/images/twitter-card.png",
+    "url": "https://tailwind-nextjs-starter-blog.vercel.app/echarts"
+  }
+}

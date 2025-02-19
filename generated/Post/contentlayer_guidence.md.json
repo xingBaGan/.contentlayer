@@ -1,0 +1,32 @@
+{
+  "tags": [],
+  "body": {
+    "raw": "## 如何启动项目\n\n[运行 C  MD 脚本](D:\\md_workspace\\.obsidian\\plugins\\contentlayer-builder\\start.bat)\n\n[停止 CMD 脚本](D:\\md_workspace\\.obsidian\\plugins\\contentlayer-builder\\stop.bat)",
+    "html": "<h2>如何启动项目</h2>\n<p><a href=\"D:%5Cmd_workspace.obsidian%5Cplugins%5Ccontentlayer-builder%5Cstart.bat\">运行 C  MD 脚本</a></p>\n<p><a href=\"D:%5Cmd_workspace.obsidian%5Cplugins%5Ccontentlayer-builder%5Cstop.bat\">停止 CMD 脚本</a></p>"
+  },
+  "_id": "contentlayer_guidence.md",
+  "_raw": {
+    "sourceFilePath": "contentlayer_guidence.md",
+    "sourceFileName": "contentlayer_guidence.md",
+    "sourceFileDir": ".",
+    "contentType": "markdown",
+    "flattenedPath": "contentlayer_guidence"
+  },
+  "type": "Post",
+  "slug": "contentlayer_guidence",
+  "path": "contentlayer_guidence",
+  "filePath": "contentlayer_guidence.md",
+  "toc": [
+    {
+      "value": "如何启动项目",
+      "url": "#如何启动项目",
+      "depth": 2
+    }
+  ],
+  "structuredData": {
+    "@context": "https://schema.org",
+    "@type": "BlogPosting",
+    "image": "/static/images/twitter-card.png",
+    "url": "https://tailwind-nextjs-starter-blog.vercel.app/contentlayer_guidence"
+  }
+}

@@ -1,0 +1,139 @@
+{
+  "cacheItemsMap": {
+    "contentlayer_guidence.md": {
+      "document": {
+        "tags": [],
+        "body": {
+          "raw": "## 如何启动项目\n\n[运行 C  MD 脚本](D:\\md_workspace\\.obsidian\\plugins\\contentlayer-builder\\start.bat)\n\n[停止 CMD 脚本](D:\\md_workspace\\.obsidian\\plugins\\contentlayer-builder\\stop.bat)",
+          "html": "<h2>如何启动项目</h2>\n<p><a href=\"D:%5Cmd_workspace.obsidian%5Cplugins%5Ccontentlayer-builder%5Cstart.bat\">运行 C  MD 脚本</a></p>\n<p><a href=\"D:%5Cmd_workspace.obsidian%5Cplugins%5Ccontentlayer-builder%5Cstop.bat\">停止 CMD 脚本</a></p>"
+        },
+        "_id": "contentlayer_guidence.md",
+        "_raw": {
+          "sourceFilePath": "contentlayer_guidence.md",
+          "sourceFileName": "contentlayer_guidence.md",
+          "sourceFileDir": ".",
+          "contentType": "markdown",
+          "flattenedPath": "contentlayer_guidence"
+        },
+        "type": "Post",
+        "slug": "contentlayer_guidence",
+        "path": "contentlayer_guidence",
+        "filePath": "contentlayer_guidence.md",
+        "toc": [
+          {
+            "value": "如何启动项目",
+            "url": "#如何启动项目",
+            "depth": 2
+          }
+        ],
+        "structuredData": {
+          "@context": "https://schema.org",
+          "@type": "BlogPosting",
+          "image": "/static/images/twitter-card.png",
+          "url": "https://tailwind-nextjs-starter-blog.vercel.app/contentlayer_guidence"
+        }
+      },
+      "documentHash": "1730102465000",
+      "hasWarnings": false,
+      "documentTypeName": "Post"
+    },
+    "test.md": {
+      "document": {
+        "tags": [],
+        "body": {
+          "raw": "测试文件",
+          "html": "<p>测试文件</p>"
+        },
+        "_id": "test.md",
+        "_raw": {
+          "sourceFilePath": "test.md",
+          "sourceFileName": "test.md",
+          "sourceFileDir": ".",
+          "contentType": "markdown",
+          "flattenedPath": "test"
+        },
+        "type": "Post",
+        "slug": "test",
+        "path": "test",
+        "filePath": "test.md",
+        "toc": [],
+        "structuredData": {
+          "@context": "https://schema.org",
+          "@type": "BlogPosting",
+          "image": "/static/images/twitter-card.png",
+          "url": "https://tailwind-nextjs-starter-blog.vercel.app/test"
+        }
+      },
+      "documentHash": "1733409642563",
+      "hasWarnings": false,
+      "documentTypeName": "Post"
+    },
+    "怎么使用pyautogui 跳过cloudflare.md": {
+      "document": {
+        "tags": [],
+        "body": {
+          "raw": "\n要使用 `conda` 创建一个包含 `pyautogui` 的环境，你可以按照以下步骤操作：\n\n1. **打开终端或命令提示符**：首先，你需要打开终端（Linux/macOS）或命令提示符/Anaconda Prompt（Windows）。\n\n2. **创建新的conda环境**：使用以下命令创建一个新的conda环境，并指定Python版本。例如，如果你想创建一个名为 `pyautogui_env` 的环境，并且使用Python 3.8，你可以运行：\n   ```bash\n   conda create --name pyautogui_env python=3.8\n   ```\n\n3. **激活新环境**：创建环境后，你需要激活它。在终端或命令提示符中运行以下命令：\n   - 对于Windows：\n     ```bash\n     conda activate pyautogui_env\n     ```\n   - 对于macOS/Linux：\n     ```bash\n     source activate pyautogui_env\n     ```\n\n4. **安装pyautogui**：在激活的环境后，你可以使用以下命令安装 `pyautogui`：\n   ```bash\n   conda install pyautogui\n   ```\n\n5. **验证安装**：安装完成后，你可以通过运行以下命令来验证 `pyautogui` 是否成功安装：\n   ```python\n   python -c \"import pyautogui; print(pyautogui.__version__)\"\n   ```\n\n这样，你就成功创建了一个包含 `pyautogui` 的conda环境。你可以在这个环境中运行任何需要 `pyautogui` 的Python脚本。`\n\n\n### 怎么识别屏幕中checkbox?\n\n[xingBaGan/cloudflare-bypass (github.com)](https://github.com/xingBaGan/cloudflare-bypass)\n",
+          "html": "<p>要使用 <code>conda</code> 创建一个包含 <code>pyautogui</code> 的环境，你可以按照以下步骤操作：</p>\n<ol>\n<li>\n<p><strong>打开终端或命令提示符</strong>：首先，你需要打开终端（Linux/macOS）或命令提示符/Anaconda Prompt（Windows）。</p>\n</li>\n<li>\n<p><strong>创建新的conda环境</strong>：使用以下命令创建一个新的conda环境，并指定Python版本。例如，如果你想创建一个名为 <code>pyautogui_env</code> 的环境，并且使用Python 3.8，你可以运行：</p>\n<pre><code class=\"language-bash\">conda create --name pyautogui_env python=3.8\n</code></pre>\n</li>\n<li>\n<p><strong>激活新环境</strong>：创建环境后，你需要激活它。在终端或命令提示符中运行以下命令：</p>\n<ul>\n<li>对于Windows：\n<pre><code class=\"language-bash\">conda activate pyautogui_env\n</code></pre>\n</li>\n<li>对于macOS/Linux：\n<pre><code class=\"language-bash\">source activate pyautogui_env\n</code></pre>\n</li>\n</ul>\n</li>\n<li>\n<p><strong>安装pyautogui</strong>：在激活的环境后，你可以使用以下命令安装 <code>pyautogui</code>：</p>\n<pre><code class=\"language-bash\">conda install pyautogui\n</code></pre>\n</li>\n<li>\n<p><strong>验证安装</strong>：安装完成后，你可以通过运行以下命令来验证 <code>pyautogui</code> 是否成功安装：</p>\n<pre><code class=\"language-python\">python -c \"import pyautogui; print(pyautogui.__version__)\"\n</code></pre>\n</li>\n</ol>\n<p>这样，你就成功创建了一个包含 <code>pyautogui</code> 的conda环境。你可以在这个环境中运行任何需要 <code>pyautogui</code> 的Python脚本。`</p>\n<h3>怎么识别屏幕中checkbox?</h3>\n<p><a href=\"https://github.com/xingBaGan/cloudflare-bypass\">xingBaGan/cloudflare-bypass (github.com)</a></p>"
+        },
+        "_id": "怎么使用pyautogui 跳过cloudflare.md",
+        "_raw": {
+          "sourceFilePath": "怎么使用pyautogui 跳过cloudflare.md",
+          "sourceFileName": "怎么使用pyautogui 跳过cloudflare.md",
+          "sourceFileDir": ".",
+          "contentType": "markdown",
+          "flattenedPath": "怎么使用pyautogui 跳过cloudflare"
+        },
+        "type": "Post",
+        "slug": "怎么使用pyautogui 跳过cloudflare",
+        "path": "怎么使用pyautogui 跳过cloudflare",
+        "filePath": "怎么使用pyautogui 跳过cloudflare.md",
+        "toc": [
+          {
+            "value": "怎么识别屏幕中checkbox?",
+            "url": "#怎么识别屏幕中checkbox",
+            "depth": 3
+          }
+        ],
+        "structuredData": {
+          "@context": "https://schema.org",
+          "@type": "BlogPosting",
+          "image": "/static/images/twitter-card.png",
+          "url": "https://tailwind-nextjs-starter-blog.vercel.app/怎么使用pyautogui 跳过cloudflare"
+        }
+      },
+      "documentHash": "1732940387196",
+      "hasWarnings": false,
+      "documentTypeName": "Post"
+    },
+    "authors/default.mdx": {
+      "document": {
+        "name": "jacob jiang",
+        "avatar": "/static/images/avatar.jfif",
+        "occupation": "frontend developer",
+        "company": "CIT",
+        "email": "gan_xignba@126.com",
+        "github": "https://github.com/xingBaGan",
+        "body": {
+          "raw": "\n没啥人生目标, 社畜码农\n",
+          "code": "var Component=(()=>{var x=Object.create;var a=Object.defineProperty;var f=Object.getOwnPropertyDescriptor;var g=Object.getOwnPropertyNames;var d=Object.getPrototypeOf,j=Object.prototype.hasOwnProperty;var _=(t,n)=>()=>(n||t((n={exports:{}}).exports,n),n.exports),h=(t,n)=>{for(var e in n)a(t,e,{get:n[e],enumerable:!0})},i=(t,n,e,r)=>{if(n&&typeof n==\"object\"||typeof n==\"function\")for(let o of g(n))!j.call(t,o)&&o!==e&&a(t,o,{get:()=>n[o],enumerable:!(r=f(n,o))||r.enumerable});return t};var l=(t,n,e)=>(e=t!=null?x(d(t)):{},i(n||!t||!t.__esModule?a(e,\"default\",{value:t,enumerable:!0}):e,t)),b=t=>i(a({},\"__esModule\",{value:!0}),t);var s=_((y,m)=>{m.exports=_jsx_runtime});var C={};h(C,{default:()=>u,frontmatter:()=>v});var c=l(s()),v={name:\"jacob jiang\",avatar:\"/static/images/avatar.jfif\",occupation:\"frontend developer\",company:\"CIT\",email:\"gan_xignba@126.com\",github:\"https://github.com/xingBaGan\"};function p(t){let n={p:\"p\",...t.components};return(0,c.jsx)(n.p,{children:\"\\u6CA1\\u5565\\u4EBA\\u751F\\u76EE\\u6807, \\u793E\\u755C\\u7801\\u519C\"})}function u(t={}){let{wrapper:n}=t.components||{};return n?(0,c.jsx)(n,{...t,children:(0,c.jsx)(p,{...t})}):p(t)}return b(C);})();\n;return Component;"
+        },
+        "_id": "authors/default.mdx",
+        "_raw": {
+          "sourceFilePath": "authors/default.mdx",
+          "sourceFileName": "default.mdx",
+          "sourceFileDir": "authors",
+          "contentType": "mdx",
+          "flattenedPath": "authors/default"
+        },
+        "type": "Authors",
+        "slug": "default",
+        "path": "authors/default",
+        "filePath": "authors/default.mdx",
+        "toc": []
+      },
+      "documentHash": "1734683385926",
+      "hasWarnings": false,
+      "documentTypeName": "Authors"
+    }
+  }
+}

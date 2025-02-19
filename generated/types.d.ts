@@ -33,6 +33,28 @@ export type Article = {
   structuredData: json
 }
 
+export type Authors = {
+  /** File path relative to `contentDirPath` */
+  _id: string
+  _raw: Local.RawDocumentData
+  type: 'Authors'
+  name: string
+  avatar?: string | undefined
+  occupation?: string | undefined
+  company?: string | undefined
+  email?: string | undefined
+  twitter?: string | undefined
+  linkedin?: string | undefined
+  github?: string | undefined
+  layout?: string | undefined
+  /** MDX file body */
+  body: MDX
+  slug: string
+  path: string
+  filePath: string
+  toc: string
+}
+
 export type Post = {
   /** File path relative to `contentDirPath` */
   _id: string
@@ -66,8 +88,8 @@ export type Post = {
 export type AllTypes = DocumentTypes | NestedTypes
 export type AllTypeNames = DocumentTypeNames | NestedTypeNames
 
-export type DocumentTypes = Article | Post
-export type DocumentTypeNames = 'Article' | 'Post'
+export type DocumentTypes = Article | Authors | Post
+export type DocumentTypeNames = 'Article' | 'Authors' | 'Post'
 
 export type NestedTypes = never
 export type NestedTypeNames = never
@@ -76,6 +98,7 @@ export type DataExports = {
   allDocuments: DocumentTypes[]
   allPosts: Post[]
   allArticles: Article[]
+  allAuthors: Authors[]
 }
 
 
@@ -96,6 +119,7 @@ declare global {
 
 export type DocumentTypeMap = {
   Article: Article
+  Authors: Authors
   Post: Post
 }
 

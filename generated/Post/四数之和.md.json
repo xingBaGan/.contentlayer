@@ -1,0 +1,26 @@
+{
+  "tags": [],
+  "body": {
+    "raw": "怎么避免重复？\n* 枚举下标必须大于上一重枚举下标\n* 当前元素与下一元素相同，跳过当前\n* 使用暴力枚举素所有情况O(n^4)\n\n统计频次\n使用hash map 存储 A+B 的 sum 和频次。\n这里不需要去重。\n\n\n两数之后需要返回index, 因此不能使用排序。",
+    "html": "<p>怎么避免重复？</p>\n<ul>\n<li>枚举下标必须大于上一重枚举下标</li>\n<li>当前元素与下一元素相同，跳过当前</li>\n<li>使用暴力枚举素所有情况O(n^4)</li>\n</ul>\n<p>统计频次\n使用hash map 存储 A+B 的 sum 和频次。\n这里不需要去重。</p>\n<p>两数之后需要返回index, 因此不能使用排序。</p>"
+  },
+  "_id": "四数之和.md",
+  "_raw": {
+    "sourceFilePath": "四数之和.md",
+    "sourceFileName": "四数之和.md",
+    "sourceFileDir": ".",
+    "contentType": "markdown",
+    "flattenedPath": "四数之和"
+  },
+  "type": "Post",
+  "slug": "四数之和",
+  "path": "四数之和",
+  "filePath": "四数之和.md",
+  "toc": [],
+  "structuredData": {
+    "@context": "https://schema.org",
+    "@type": "BlogPosting",
+    "image": "/static/images/twitter-card.png",
+    "url": "https://tailwind-nextjs-starter-blog.vercel.app/四数之和"
+  }
+}

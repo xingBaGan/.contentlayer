@@ -1,0 +1,27 @@
+[
+  {
+    "name": "jacob jiang",
+    "avatar": "/static/images/avatar.jfif",
+    "occupation": "frontend developer",
+    "company": "CIT",
+    "email": "gan_xignba@126.com",
+    "github": "https://github.com/xingBaGan",
+    "body": {
+      "raw": "\n没啥人生目标, 社畜码农\n",
+      "code": "var Component=(()=>{var x=Object.create;var a=Object.defineProperty;var f=Object.getOwnPropertyDescriptor;var g=Object.getOwnPropertyNames;var d=Object.getPrototypeOf,j=Object.prototype.hasOwnProperty;var _=(t,n)=>()=>(n||t((n={exports:{}}).exports,n),n.exports),h=(t,n)=>{for(var e in n)a(t,e,{get:n[e],enumerable:!0})},i=(t,n,e,r)=>{if(n&&typeof n==\"object\"||typeof n==\"function\")for(let o of g(n))!j.call(t,o)&&o!==e&&a(t,o,{get:()=>n[o],enumerable:!(r=f(n,o))||r.enumerable});return t};var l=(t,n,e)=>(e=t!=null?x(d(t)):{},i(n||!t||!t.__esModule?a(e,\"default\",{value:t,enumerable:!0}):e,t)),b=t=>i(a({},\"__esModule\",{value:!0}),t);var s=_((y,m)=>{m.exports=_jsx_runtime});var C={};h(C,{default:()=>u,frontmatter:()=>v});var c=l(s()),v={name:\"jacob jiang\",avatar:\"/static/images/avatar.jfif\",occupation:\"frontend developer\",company:\"CIT\",email:\"gan_xignba@126.com\",github:\"https://github.com/xingBaGan\"};function p(t){let n={p:\"p\",...t.components};return(0,c.jsx)(n.p,{children:\"\\u6CA1\\u5565\\u4EBA\\u751F\\u76EE\\u6807, \\u793E\\u755C\\u7801\\u519C\"})}function u(t={}){let{wrapper:n}=t.components||{};return n?(0,c.jsx)(n,{...t,children:(0,c.jsx)(p,{...t})}):p(t)}return b(C);})();\n;return Component;"
+    },
+    "_id": "authors/default.mdx",
+    "_raw": {
+      "sourceFilePath": "authors/default.mdx",
+      "sourceFileName": "default.mdx",
+      "sourceFileDir": "authors",
+      "contentType": "mdx",
+      "flattenedPath": "authors/default"
+    },
+    "type": "Authors",
+    "slug": "default",
+    "path": "authors/default",
+    "filePath": "authors/default.mdx",
+    "toc": []
+  }
+]

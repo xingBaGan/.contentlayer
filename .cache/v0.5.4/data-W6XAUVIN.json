@@ -1,0 +1,154 @@
+{
+  "cacheItemsMap": {
+    "adb 常用命令.md": {
+      "document": {
+        "title": "什么是ADB? 及其常用命令",
+        "date": "2025-02-19T00:00:00.000Z",
+        "tags": [],
+        "body": {
+          "raw": "\n\nadb （android debugger bridge）\nADB，全称为Android Debug Bridge，即安卓调试桥，是一种功能多样的命令行工具，它允许用户与Android设备（包括模拟器）进行通信。ADB主要用于开发者在开发和调试Android应用程序时，通过电脑对设备进行操作，如安装和卸载应用、复制文件、运行shell命令、查看设备日志等。\n\nADB是Android SDK（Software Development Kit）的一部分，它包含三个主要组件：\n\n1. 客户端（Client）：在开发机器上运行，用于发送命令。用户可以通过命令行终端使用ADB命令。\n2. 守护程序（adbd）：在Android设备上作为后台进程运行，处理来自ADB服务器的命令请求。\n3. 服务器（Server）：在开发机器上运行，管理客户端与守护程序之间的通信。\n    \n\n使用ADB时，用户可以通过USB数据线或网络（如Wi-Fi）连接设备。一旦连接成功，就可以执行各种ADB命令来管理设备或进行调试。例如，可以使用`adb devices`列出连接的设备，`adb install <apk>`安装应用，`adb shell`进入设备的shell环境等。ADB是Android开发和测试中不可或缺的工具。\n\n通过数据线链接\n`adb devices`\n\n看到连接的设备\n\n重启adb服务器\n`adb tcpip 5555` \n\n\n进入要调试的控制台\n\n```shell\nadb shell\n\nsu\n\nifconfig \n```\n\n连接远程的设备\n`adb connect ip:5555\n\nadb connect 192.168.0.100:5555\n查看正在运行 [查看手机上 app 的包名 几种方式_查看app包名_百年渔翁_肯肯的博客-CSDN博客](https://blog.csdn.net/qq_30007885/article/details/119418593#:~:text=%E6%9F%A5%E7%9C%8B%E6%89%8B%E6%9C%BA%E4%B8%8A%20app%20%E7%9A%84%E5%8C%85%E5%90%8D%20%E5%87%A0%E7%A7%8D%E6%96%B9%E5%BC%8F%201%20adb,shell%202%20%E6%9F%A5%E8%AF%A2%E6%AD%A3%E5%9C%A8%E8%BF%90%E8%A1%8C%20app%20%E7%9A%84%E5%8C%85%E5%90%8D%203%20%E6%9F%A5%E7%9C%8B%E5%90%AF%E5%8A%A8activity)\n\n```\nC:\\Users\\10630>adb shell dumpsys window | findstr mCurrentFocus\n  mCurrentFocus=Window{c3cd2c3 u0 eu.pokemmo.client/eu.pokemmo.client.AndroidLauncher\n```\n\n eu.pokemmo.client\n\n``",
+          "html": "<p>adb （android debugger bridge）\nADB，全称为Android Debug Bridge，即安卓调试桥，是一种功能多样的命令行工具，它允许用户与Android设备（包括模拟器）进行通信。ADB主要用于开发者在开发和调试Android应用程序时，通过电脑对设备进行操作，如安装和卸载应用、复制文件、运行shell命令、查看设备日志等。</p>\n<p>ADB是Android SDK（Software Development Kit）的一部分，它包含三个主要组件：</p>\n<ol>\n<li>客户端（Client）：在开发机器上运行，用于发送命令。用户可以通过命令行终端使用ADB命令。</li>\n<li>守护程序（adbd）：在Android设备上作为后台进程运行，处理来自ADB服务器的命令请求。</li>\n<li>服务器（Server）：在开发机器上运行，管理客户端与守护程序之间的通信。</li>\n</ol>\n<p>使用ADB时，用户可以通过USB数据线或网络（如Wi-Fi）连接设备。一旦连接成功，就可以执行各种ADB命令来管理设备或进行调试。例如，可以使用<code>adb devices</code>列出连接的设备，<code>adb install &#x3C;apk></code>安装应用，<code>adb shell</code>进入设备的shell环境等。ADB是Android开发和测试中不可或缺的工具。</p>\n<p>通过数据线链接\n<code>adb devices</code></p>\n<p>看到连接的设备</p>\n<p>重启adb服务器\n<code>adb tcpip 5555</code></p>\n<p>进入要调试的控制台</p>\n<pre><code class=\"language-shell\">adb shell\n\nsu\n\nifconfig \n</code></pre>\n<p>连接远程的设备\n`adb connect ip:5555</p>\n<p>adb connect 192.168.0.100:5555\n查看正在运行 <a href=\"https://blog.csdn.net/qq_30007885/article/details/119418593#:~:text=%E6%9F%A5%E7%9C%8B%E6%89%8B%E6%9C%BA%E4%B8%8A%20app%20%E7%9A%84%E5%8C%85%E5%90%8D%20%E5%87%A0%E7%A7%8D%E6%96%B9%E5%BC%8F%201%20adb,shell%202%20%E6%9F%A5%E8%AF%A2%E6%AD%A3%E5%9C%A8%E8%BF%90%E8%A1%8C%20app%20%E7%9A%84%E5%8C%85%E5%90%8D%203%20%E6%9F%A5%E7%9C%8B%E5%90%AF%E5%8A%A8activity\">查看手机上 app 的包名 几种方式_查看app包名_百年渔翁_肯肯的博客-CSDN博客</a></p>\n<pre><code>C:\\Users\\10630>adb shell dumpsys window | findstr mCurrentFocus\n  mCurrentFocus=Window{c3cd2c3 u0 eu.pokemmo.client/eu.pokemmo.client.AndroidLauncher\n</code></pre>\n<p>eu.pokemmo.client</p>\n<p>``</p>"
+        },
+        "_id": "adb 常用命令.md",
+        "_raw": {
+          "sourceFilePath": "adb 常用命令.md",
+          "sourceFileName": "adb 常用命令.md",
+          "sourceFileDir": ".",
+          "contentType": "markdown",
+          "flattenedPath": "adb 常用命令"
+        },
+        "type": "Post",
+        "slug": "adb 常用命令",
+        "path": "adb 常用命令",
+        "filePath": "adb 常用命令.md",
+        "toc": [],
+        "structuredData": {
+          "@context": "https://schema.org",
+          "@type": "BlogPosting",
+          "headline": "什么是ADB? 及其常用命令",
+          "datePublished": "2025-02-19T00:00:00.000Z",
+          "dateModified": "2025-02-19T00:00:00.000Z",
+          "image": "/static/images/twitter-card.png",
+          "url": "https://tailwind-nextjs-starter-blog.vercel.app/adb 常用命令"
+        }
+      },
+      "documentHash": "1739956270305",
+      "hasWarnings": true,
+      "documentTypeName": "Post"
+    },
+    "git 进阶.md": {
+      "document": {
+        "title": "git 设置 代理",
+        "date": "2025-02-19T00:00:00.000Z",
+        "tags": [],
+        "body": {
+          "raw": "\n### git 设置 代理\n\n[Git 命令行使用代理 VPN - Fany's Blog (fanlumaster.github.io)](https://fanlumaster.github.io/2021/03/23/Git-%E5%91%BD%E4%BB%A4%E8%A1%8C%E4%BD%BF%E7%94%A8%E4%BB%A3%E7%90%86-VPN/#:~:text=Git%20%E5%91%BD%E4%BB%A4%E8%A1%8C%E4%BD%BF%E7%94%A8%E4%BB%A3%E7%90%86%20VPN%202021-03-23%2016%3A41%20-%202021-06-08%2000%3A29,%E8%AE%BE%E7%BD%AE%E5%AE%8C%E4%B9%8B%E5%90%8E%20git%20clone%20%E4%B8%80%E4%B8%AA%E4%BB%93%E5%BA%93%E8%BF%9B%E8%A1%8C%E6%B5%8B%E8%AF%95%EF%BC%8C%E5%8F%91%E7%8E%B0%E9%80%9F%E5%BA%A6%E9%A3%99%E5%88%B0%E4%BA%86%205.5%20mb%2Fs%EF%BC%8C%E8%80%8C%E5%8E%9F%E6%9D%A5%E7%9A%84%E9%80%9F%E5%BA%A6%E6%98%AF%E5%8F%AA%E6%9C%89%E5%8D%81%E5%87%A0%20kb%2Fs%20%E7%9A%84%E3%80%82)\n\n清空代理\n```\ngit config --global --unset http.proxy\ngit config --global --unset https.proxy\n```\n\n```\ngit config --global http.proxy 'http://127.0.0.1:10080'\ngit config --global https.proxy 'https://127.0.0.1:10080'\n```\n\n### git 设置username email\n\n[使用git config --global设置用户名和邮件_git config --global user.name-CSDN博客](https://blog.csdn.net/sjt19910311/article/details/83685616)",
+          "html": "<h3>git 设置 代理</h3>\n<p><a href=\"https://fanlumaster.github.io/2021/03/23/Git-%E5%91%BD%E4%BB%A4%E8%A1%8C%E4%BD%BF%E7%94%A8%E4%BB%A3%E7%90%86-VPN/#:~:text=Git%20%E5%91%BD%E4%BB%A4%E8%A1%8C%E4%BD%BF%E7%94%A8%E4%BB%A3%E7%90%86%20VPN%202021-03-23%2016%3A41%20-%202021-06-08%2000%3A29,%E8%AE%BE%E7%BD%AE%E5%AE%8C%E4%B9%8B%E5%90%8E%20git%20clone%20%E4%B8%80%E4%B8%AA%E4%BB%93%E5%BA%93%E8%BF%9B%E8%A1%8C%E6%B5%8B%E8%AF%95%EF%BC%8C%E5%8F%91%E7%8E%B0%E9%80%9F%E5%BA%A6%E9%A3%99%E5%88%B0%E4%BA%86%205.5%20mb%2Fs%EF%BC%8C%E8%80%8C%E5%8E%9F%E6%9D%A5%E7%9A%84%E9%80%9F%E5%BA%A6%E6%98%AF%E5%8F%AA%E6%9C%89%E5%8D%81%E5%87%A0%20kb%2Fs%20%E7%9A%84%E3%80%82\">Git 命令行使用代理 VPN - Fany's Blog (fanlumaster.github.io)</a></p>\n<p>清空代理</p>\n<pre><code>git config --global --unset http.proxy\ngit config --global --unset https.proxy\n</code></pre>\n<pre><code>git config --global http.proxy 'http://127.0.0.1:10080'\ngit config --global https.proxy 'https://127.0.0.1:10080'\n</code></pre>\n<h3>git 设置username email</h3>\n<p><a href=\"https://blog.csdn.net/sjt19910311/article/details/83685616\">使用git config --global设置用户名和邮件_git config --global user.name-CSDN博客</a></p>"
+        },
+        "_id": "git 进阶.md",
+        "_raw": {
+          "sourceFilePath": "git 进阶.md",
+          "sourceFileName": "git 进阶.md",
+          "sourceFileDir": ".",
+          "contentType": "markdown",
+          "flattenedPath": "git 进阶"
+        },
+        "type": "Post",
+        "slug": "git 进阶",
+        "path": "git 进阶",
+        "filePath": "git 进阶.md",
+        "toc": [
+          {
+            "value": "git 设置 代理",
+            "url": "#git-设置-代理",
+            "depth": 3
+          },
+          {
+            "value": "git 设置username email",
+            "url": "#git-设置username-email",
+            "depth": 3
+          }
+        ],
+        "structuredData": {
+          "@context": "https://schema.org",
+          "@type": "BlogPosting",
+          "headline": "git 设置 代理",
+          "datePublished": "2025-02-19T00:00:00.000Z",
+          "dateModified": "2025-02-19T00:00:00.000Z",
+          "image": "/static/images/twitter-card.png",
+          "url": "https://tailwind-nextjs-starter-blog.vercel.app/git 进阶"
+        }
+      },
+      "documentHash": "1739956546553",
+      "hasWarnings": false,
+      "documentTypeName": "Post"
+    },
+    "krita comfyUI LCM 的实时绘画安装教程.md": {
+      "document": {
+        "title": "krita comfyUI 插件安装教程",
+        "date": "2025-02-19T00:00:00.000Z",
+        "tags": [],
+        "body": {
+          "raw": "\n要在 Krita 中使用 ComfyUI LCM（Live Canvas Mode）进行实时绘画，你可以按照以下步骤操作：\n[ComfyUI Setup · Acly/krita-ai-diffusion Wiki (github.com)](https://github.com/Acly/krita-ai-diffusion/wiki/ComfyUI-Setup)\n### 1. 安装 Krita 和 ComfyUI\n\n确保你已经安装了 Krita 和 ComfyUI。如果没有安装，可以从以下链接下载：\n\n- [下载后页面 | Krita](https://krita.org/zh-cn/post-download/)\n- [Release v0.0.2 · comfyanonymous/ComfyUI (github.com)](https://github.com/comfyanonymous/ComfyUI/releases/tag/v0.0.2)\n![Pasted image 20240727151823](https://picgo-1300491698.cos.ap-nanjing.myqcloud.com/Pasted%20image%2020240727151823.png)\n### 2. 安装 LCM 插件\n\n你需要安装 Krita 的 Live Canvas Mode 插件。可以通过以下步骤操作：\n\n1. **下载 LCM 插件**：\n    \n    - 访问 LCM 插件的官方网站或 GitHub 页面，下载最新版本的插件包。\n\n[Releases · Acly/krita-ai-diffusion (github.com)](https://github.com/Acly/krita-ai-diffusion/releases)\n1. **安装插件**：\n    ![Pasted image 20240727154721](https://picgo-1300491698.cos.ap-nanjing.myqcloud.com/Pasted%20image%2020240727154721.png)\n  [Krita+ComfyUI+LCM 实时AI绘画一键整合包! - 知乎 (zhihu.com)](https://zhuanlan.zhihu.com/p/668305270)\n\n### 3. 启动 ComfyUI LCM\n\n1. **启动 Krita**：\n    \n    - 打开 Krita，并创建一个新的画布或者打开现有的项目。\n2. **开启实时绘画模式**：\n按照下面教程：\n    https://www.bilibili.com/video/BV1au4y1P7ZS?vd_source=27aad4b0784cb53231c2baaed62a0b35\n    - 在 Krita 中，找到 LCM 插件的工具栏按钮，点击它以开启实时绘画模式。\n    - 你应该能够在画布上看到实时更新的绘画效果。\n配置comfyUI\n![Pasted image 20240727155503](https://picgo-1300491698.cos.ap-nanjing.myqcloud.com/Pasted%20image%2020240727155503.png)\n注意连接过程会提示你，缺少相应的依赖，你只要更加指示去安装。\n去对应的github，安装相关模型：\n[ComfyUI Setup · Acly/krita-ai-diffusion Wiki (github.com)](https://github.com/Acly/krita-ai-diffusion/wiki/ComfyUI-Setup)\n![Pasted image 20240727160612](https://picgo-1300491698.cos.ap-nanjing.myqcloud.com/Pasted%20image%2020240727160612.png)\n你也可以使用如下： 【SD1.5 我直接使用百度网盘中的】\nhttps://pan.baidu.com/s/1TMSdDXiBCJFQQJiIjuqNZg?pwd=xtcd\n配置完之后的文件如下：\n![Pasted image 20240728002745](https://picgo-1300491698.cos.ap-nanjing.myqcloud.com/Pasted%20image%2020240728002745.png)\n![Pasted image 20240728001325](https://picgo-1300491698.cos.ap-nanjing.myqcloud.com/Pasted%20image%2020240728001325.png)\n![Pasted image 20240728001408](https://picgo-1300491698.cos.ap-nanjing.myqcloud.com/Pasted%20image%2020240728001408.png)\n![Pasted image 20240728001657](https://picgo-1300491698.cos.ap-nanjing.myqcloud.com/Pasted%20image%2020240728001657.png)\n![Pasted image 20240728002013](https://picgo-1300491698.cos.ap-nanjing.myqcloud.com/Pasted%20image%2020240728002013.png)\n![Pasted image 20240728002908](https://picgo-1300491698.cos.ap-nanjing.myqcloud.com/Pasted%20image%2020240728002908.png)\n![Pasted image 20240728002940](https://picgo-1300491698.cos.ap-nanjing.myqcloud.com/Pasted%20image%2020240728002940.png)\n\n### 4. 使用实时预览\n\n1. **配置实时预览**：\n    \n    - 在 ComfyUI 中，进入设置菜单，确保实时预览（Real-time Preview）选项已开启。\n2. **绘画和实时预览**：\n    \n    - 在 Krita 中进行绘画时，ComfyUI LCM 会实时捕捉你的绘画动作并在预览窗口中显示。\n    - 你可以调整 ComfyUI 的设置，以优化实时预览的性能和质量。\n\n### 5. 保存和导出\n\n1. **保存项目**：\n    \n    - 在 Krita 中保存你的项目，确保你的工作不会丢失。\n2. **导出预览**：\n    \n    - 如果需要，你可以从 ComfyUI 中导出实时预览的结果，保存为图片或视频文件。\n\n### 注意事项\n\n- 确保你的电脑性能足够强大，因为实时预览和绘画同时进行可能需要较高的计算资源。\n- 如果遇到任何问题，可以查阅 Krita 和 ComfyUI 的官方文档或社区论坛，获取更多帮助和支持。",
+          "html": "<p>要在 Krita 中使用 ComfyUI LCM（Live Canvas Mode）进行实时绘画，你可以按照以下步骤操作：\n<a href=\"https://github.com/Acly/krita-ai-diffusion/wiki/ComfyUI-Setup\">ComfyUI Setup · Acly/krita-ai-diffusion Wiki (github.com)</a></p>\n<h3>1. 安装 Krita 和 ComfyUI</h3>\n<p>确保你已经安装了 Krita 和 ComfyUI。如果没有安装，可以从以下链接下载：</p>\n<ul>\n<li><a href=\"https://krita.org/zh-cn/post-download/\">下载后页面 | Krita</a></li>\n<li><a href=\"https://github.com/comfyanonymous/ComfyUI/releases/tag/v0.0.2\">Release v0.0.2 · comfyanonymous/ComfyUI (github.com)</a>\n<img src=\"https://picgo-1300491698.cos.ap-nanjing.myqcloud.com/Pasted%20image%2020240727151823.png\" alt=\"Pasted image 20240727151823\"></li>\n</ul>\n<h3>2. 安装 LCM 插件</h3>\n<p>你需要安装 Krita 的 Live Canvas Mode 插件。可以通过以下步骤操作：</p>\n<ol>\n<li>\n<p><strong>下载 LCM 插件</strong>：</p>\n<ul>\n<li>访问 LCM 插件的官方网站或 GitHub 页面，下载最新版本的插件包。</li>\n</ul>\n</li>\n</ol>\n<p><a href=\"https://github.com/Acly/krita-ai-diffusion/releases\">Releases · Acly/krita-ai-diffusion (github.com)</a></p>\n<ol>\n<li><strong>安装插件</strong>：\n<img src=\"https://picgo-1300491698.cos.ap-nanjing.myqcloud.com/Pasted%20image%2020240727154721.png\" alt=\"Pasted image 20240727154721\">\n<a href=\"https://zhuanlan.zhihu.com/p/668305270\">Krita+ComfyUI+LCM 实时AI绘画一键整合包! - 知乎 (zhihu.com)</a></li>\n</ol>\n<h3>3. 启动 ComfyUI LCM</h3>\n<ol>\n<li>\n<p><strong>启动 Krita</strong>：</p>\n<ul>\n<li>打开 Krita，并创建一个新的画布或者打开现有的项目。</li>\n</ul>\n</li>\n<li>\n<p><strong>开启实时绘画模式</strong>：\n按照下面教程：\nhttps://www.bilibili.com/video/BV1au4y1P7ZS?vd_source=27aad4b0784cb53231c2baaed62a0b35</p>\n<ul>\n<li>在 Krita 中，找到 LCM 插件的工具栏按钮，点击它以开启实时绘画模式。</li>\n<li>你应该能够在画布上看到实时更新的绘画效果。\n配置comfyUI\n<img src=\"https://picgo-1300491698.cos.ap-nanjing.myqcloud.com/Pasted%20image%2020240727155503.png\" alt=\"Pasted image 20240727155503\">\n注意连接过程会提示你，缺少相应的依赖，你只要更加指示去安装。\n去对应的github，安装相关模型：\n<a href=\"https://github.com/Acly/krita-ai-diffusion/wiki/ComfyUI-Setup\">ComfyUI Setup · Acly/krita-ai-diffusion Wiki (github.com)</a>\n<img src=\"https://picgo-1300491698.cos.ap-nanjing.myqcloud.com/Pasted%20image%2020240727160612.png\" alt=\"Pasted image 20240727160612\">\n你也可以使用如下： 【SD1.5 我直接使用百度网盘中的】\nhttps://pan.baidu.com/s/1TMSdDXiBCJFQQJiIjuqNZg?pwd=xtcd\n配置完之后的文件如下：\n<img src=\"https://picgo-1300491698.cos.ap-nanjing.myqcloud.com/Pasted%20image%2020240728002745.png\" alt=\"Pasted image 20240728002745\">\n<img src=\"https://picgo-1300491698.cos.ap-nanjing.myqcloud.com/Pasted%20image%2020240728001325.png\" alt=\"Pasted image 20240728001325\">\n<img src=\"https://picgo-1300491698.cos.ap-nanjing.myqcloud.com/Pasted%20image%2020240728001408.png\" alt=\"Pasted image 20240728001408\">\n<img src=\"https://picgo-1300491698.cos.ap-nanjing.myqcloud.com/Pasted%20image%2020240728001657.png\" alt=\"Pasted image 20240728001657\">\n<img src=\"https://picgo-1300491698.cos.ap-nanjing.myqcloud.com/Pasted%20image%2020240728002013.png\" alt=\"Pasted image 20240728002013\">\n<img src=\"https://picgo-1300491698.cos.ap-nanjing.myqcloud.com/Pasted%20image%2020240728002908.png\" alt=\"Pasted image 20240728002908\">\n<img src=\"https://picgo-1300491698.cos.ap-nanjing.myqcloud.com/Pasted%20image%2020240728002940.png\" alt=\"Pasted image 20240728002940\"></li>\n</ul>\n</li>\n</ol>\n<h3>4. 使用实时预览</h3>\n<ol>\n<li>\n<p><strong>配置实时预览</strong>：</p>\n<ul>\n<li>在 ComfyUI 中，进入设置菜单，确保实时预览（Real-time Preview）选项已开启。</li>\n</ul>\n</li>\n<li>\n<p><strong>绘画和实时预览</strong>：</p>\n<ul>\n<li>在 Krita 中进行绘画时，ComfyUI LCM 会实时捕捉你的绘画动作并在预览窗口中显示。</li>\n<li>你可以调整 ComfyUI 的设置，以优化实时预览的性能和质量。</li>\n</ul>\n</li>\n</ol>\n<h3>5. 保存和导出</h3>\n<ol>\n<li>\n<p><strong>保存项目</strong>：</p>\n<ul>\n<li>在 Krita 中保存你的项目，确保你的工作不会丢失。</li>\n</ul>\n</li>\n<li>\n<p><strong>导出预览</strong>：</p>\n<ul>\n<li>如果需要，你可以从 ComfyUI 中导出实时预览的结果，保存为图片或视频文件。</li>\n</ul>\n</li>\n</ol>\n<h3>注意事项</h3>\n<ul>\n<li>确保你的电脑性能足够强大，因为实时预览和绘画同时进行可能需要较高的计算资源。</li>\n<li>如果遇到任何问题，可以查阅 Krita 和 ComfyUI 的官方文档或社区论坛，获取更多帮助和支持。</li>\n</ul>"
+        },
+        "_id": "krita comfyUI LCM 的实时绘画安装教程.md",
+        "_raw": {
+          "sourceFilePath": "krita comfyUI LCM 的实时绘画安装教程.md",
+          "sourceFileName": "krita comfyUI LCM 的实时绘画安装教程.md",
+          "sourceFileDir": ".",
+          "contentType": "markdown",
+          "flattenedPath": "krita comfyUI LCM 的实时绘画安装教程"
+        },
+        "type": "Post",
+        "slug": "krita comfyUI LCM 的实时绘画安装教程",
+        "path": "krita comfyUI LCM 的实时绘画安装教程",
+        "filePath": "krita comfyUI LCM 的实时绘画安装教程.md",
+        "toc": [
+          {
+            "value": "1. 安装 Krita 和 ComfyUI",
+            "url": "#1-安装-krita-和-comfyui",
+            "depth": 3
+          },
+          {
+            "value": "2. 安装 LCM 插件",
+            "url": "#2-安装-lcm-插件",
+            "depth": 3
+          },
+          {
+            "value": "3. 启动 ComfyUI LCM",
+            "url": "#3-启动-comfyui-lcm",
+            "depth": 3
+          },
+          {
+            "value": "4. 使用实时预览",
+            "url": "#4-使用实时预览",
+            "depth": 3
+          },
+          {
+            "value": "5. 保存和导出",
+            "url": "#5-保存和导出",
+            "depth": 3
+          },
+          {
+            "value": "注意事项",
+            "url": "#注意事项",
+            "depth": 3
+          }
+        ],
+        "structuredData": {
+          "@context": "https://schema.org",
+          "@type": "BlogPosting",
+          "headline": "krita comfyUI 插件安装教程",
+          "datePublished": "2025-02-19T00:00:00.000Z",
+          "dateModified": "2025-02-19T00:00:00.000Z",
+          "image": "/static/images/twitter-card.png",
+          "url": "https://tailwind-nextjs-starter-blog.vercel.app/krita comfyUI LCM 的实时绘画安装教程"
+        }
+      },
+      "documentHash": "1739957086253",
+      "hasWarnings": false,
+      "documentTypeName": "Post"
+    }
+  }
+}

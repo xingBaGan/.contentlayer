@@ -1,0 +1,31 @@
+{
+  "title": "什么是ADB? 及其常用命令",
+  "date": "2025-02-19T00:00:00.000Z",
+  "tags": [],
+  "body": {
+    "raw": "\n\nadb （android debugger bridge）\nADB，全称为Android Debug Bridge，即安卓调试桥，是一种功能多样的命令行工具，它允许用户与Android设备（包括模拟器）进行通信。ADB主要用于开发者在开发和调试Android应用程序时，通过电脑对设备进行操作，如安装和卸载应用、复制文件、运行shell命令、查看设备日志等。\n\nADB是Android SDK（Software Development Kit）的一部分，它包含三个主要组件：\n\n1. 客户端（Client）：在开发机器上运行，用于发送命令。用户可以通过命令行终端使用ADB命令。\n2. 守护程序（adbd）：在Android设备上作为后台进程运行，处理来自ADB服务器的命令请求。\n3. 服务器（Server）：在开发机器上运行，管理客户端与守护程序之间的通信。\n    \n\n使用ADB时，用户可以通过USB数据线或网络（如Wi-Fi）连接设备。一旦连接成功，就可以执行各种ADB命令来管理设备或进行调试。例如，可以使用`adb devices`列出连接的设备，`adb install <apk>`安装应用，`adb shell`进入设备的shell环境等。ADB是Android开发和测试中不可或缺的工具。\n\n通过数据线链接\n`adb devices`\n\n看到连接的设备\n\n重启adb服务器\n`adb tcpip 5555` \n\n\n进入要调试的控制台\n\n```shell\nadb shell\n\nsu\n\nifconfig \n```\n\n连接远程的设备\n`adb connect ip:5555\n\nadb connect 192.168.0.100:5555\n查看正在运行 [查看手机上 app 的包名 几种方式_查看app包名_百年渔翁_肯肯的博客-CSDN博客](https://blog.csdn.net/qq_30007885/article/details/119418593#:~:text=%E6%9F%A5%E7%9C%8B%E6%89%8B%E6%9C%BA%E4%B8%8A%20app%20%E7%9A%84%E5%8C%85%E5%90%8D%20%E5%87%A0%E7%A7%8D%E6%96%B9%E5%BC%8F%201%20adb,shell%202%20%E6%9F%A5%E8%AF%A2%E6%AD%A3%E5%9C%A8%E8%BF%90%E8%A1%8C%20app%20%E7%9A%84%E5%8C%85%E5%90%8D%203%20%E6%9F%A5%E7%9C%8B%E5%90%AF%E5%8A%A8activity)\n\n```\nC:\\Users\\10630>adb shell dumpsys window | findstr mCurrentFocus\n  mCurrentFocus=Window{c3cd2c3 u0 eu.pokemmo.client/eu.pokemmo.client.AndroidLauncher\n```\n\n eu.pokemmo.client\n\n``",
+    "html": "<p>adb （android debugger bridge）\nADB，全称为Android Debug Bridge，即安卓调试桥，是一种功能多样的命令行工具，它允许用户与Android设备（包括模拟器）进行通信。ADB主要用于开发者在开发和调试Android应用程序时，通过电脑对设备进行操作，如安装和卸载应用、复制文件、运行shell命令、查看设备日志等。</p>\n<p>ADB是Android SDK（Software Development Kit）的一部分，它包含三个主要组件：</p>\n<ol>\n<li>客户端（Client）：在开发机器上运行，用于发送命令。用户可以通过命令行终端使用ADB命令。</li>\n<li>守护程序（adbd）：在Android设备上作为后台进程运行，处理来自ADB服务器的命令请求。</li>\n<li>服务器（Server）：在开发机器上运行，管理客户端与守护程序之间的通信。</li>\n</ol>\n<p>使用ADB时，用户可以通过USB数据线或网络（如Wi-Fi）连接设备。一旦连接成功，就可以执行各种ADB命令来管理设备或进行调试。例如，可以使用<code>adb devices</code>列出连接的设备，<code>adb install &#x3C;apk></code>安装应用，<code>adb shell</code>进入设备的shell环境等。ADB是Android开发和测试中不可或缺的工具。</p>\n<p>通过数据线链接\n<code>adb devices</code></p>\n<p>看到连接的设备</p>\n<p>重启adb服务器\n<code>adb tcpip 5555</code></p>\n<p>进入要调试的控制台</p>\n<pre><code class=\"language-shell\">adb shell\n\nsu\n\nifconfig \n</code></pre>\n<p>连接远程的设备\n`adb connect ip:5555</p>\n<p>adb connect 192.168.0.100:5555\n查看正在运行 <a href=\"https://blog.csdn.net/qq_30007885/article/details/119418593#:~:text=%E6%9F%A5%E7%9C%8B%E6%89%8B%E6%9C%BA%E4%B8%8A%20app%20%E7%9A%84%E5%8C%85%E5%90%8D%20%E5%87%A0%E7%A7%8D%E6%96%B9%E5%BC%8F%201%20adb,shell%202%20%E6%9F%A5%E8%AF%A2%E6%AD%A3%E5%9C%A8%E8%BF%90%E8%A1%8C%20app%20%E7%9A%84%E5%8C%85%E5%90%8D%203%20%E6%9F%A5%E7%9C%8B%E5%90%AF%E5%8A%A8activity\">查看手机上 app 的包名 几种方式_查看app包名_百年渔翁_肯肯的博客-CSDN博客</a></p>\n<pre><code>C:\\Users\\10630>adb shell dumpsys window | findstr mCurrentFocus\n  mCurrentFocus=Window{c3cd2c3 u0 eu.pokemmo.client/eu.pokemmo.client.AndroidLauncher\n</code></pre>\n<p>eu.pokemmo.client</p>\n<p>``</p>"
+  },
+  "_id": "adb 常用命令1740386935890.md",
+  "_raw": {
+    "sourceFilePath": "adb 常用命令1740386935890.md",
+    "sourceFileName": "adb 常用命令1740386935890.md",
+    "sourceFileDir": ".",
+    "contentType": "markdown",
+    "flattenedPath": "adb 常用命令1740386935890"
+  },
+  "type": "Post",
+  "slug": "adb 常用命令1740386935890",
+  "path": "adb 常用命令1740386935890",
+  "filePath": "adb 常用命令1740386935890.md",
+  "toc": [],
+  "structuredData": {
+    "@context": "https://schema.org",
+    "@type": "BlogPosting",
+    "headline": "什么是ADB? 及其常用命令",
+    "datePublished": "2025-02-19T00:00:00.000Z",
+    "dateModified": "2025-02-19T00:00:00.000Z",
+    "image": "/static/images/twitter-card.png",
+    "url": "https://tailwind-nextjs-starter-blog.vercel.app/adb 常用命令1740386935890"
+  }
+}

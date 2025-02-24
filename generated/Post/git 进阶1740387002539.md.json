@@ -1,0 +1,42 @@
+{
+  "title": "git 设置 代理",
+  "date": "2025-02-19T00:00:00.000Z",
+  "tags": [],
+  "body": {
+    "raw": "\n### git 设置 代理\n\n[Git 命令行使用代理 VPN - Fany's Blog (fanlumaster.github.io)](https://fanlumaster.github.io/2021/03/23/Git-%E5%91%BD%E4%BB%A4%E8%A1%8C%E4%BD%BF%E7%94%A8%E4%BB%A3%E7%90%86-VPN/#:~:text=Git%20%E5%91%BD%E4%BB%A4%E8%A1%8C%E4%BD%BF%E7%94%A8%E4%BB%A3%E7%90%86%20VPN%202021-03-23%2016%3A41%20-%202021-06-08%2000%3A29,%E8%AE%BE%E7%BD%AE%E5%AE%8C%E4%B9%8B%E5%90%8E%20git%20clone%20%E4%B8%80%E4%B8%AA%E4%BB%93%E5%BA%93%E8%BF%9B%E8%A1%8C%E6%B5%8B%E8%AF%95%EF%BC%8C%E5%8F%91%E7%8E%B0%E9%80%9F%E5%BA%A6%E9%A3%99%E5%88%B0%E4%BA%86%205.5%20mb%2Fs%EF%BC%8C%E8%80%8C%E5%8E%9F%E6%9D%A5%E7%9A%84%E9%80%9F%E5%BA%A6%E6%98%AF%E5%8F%AA%E6%9C%89%E5%8D%81%E5%87%A0%20kb%2Fs%20%E7%9A%84%E3%80%82)\n\n清空代理\n```\ngit config --global --unset http.proxy\ngit config --global --unset https.proxy\n```\n\n```\ngit config --global http.proxy 'http://127.0.0.1:10080'\ngit config --global https.proxy 'https://127.0.0.1:10080'\n```\n\n### git 设置username email\n\n[使用git config --global设置用户名和邮件_git config --global user.name-CSDN博客](https://blog.csdn.net/sjt19910311/article/details/83685616)",
+    "html": "<h3>git 设置 代理</h3>\n<p><a href=\"https://fanlumaster.github.io/2021/03/23/Git-%E5%91%BD%E4%BB%A4%E8%A1%8C%E4%BD%BF%E7%94%A8%E4%BB%A3%E7%90%86-VPN/#:~:text=Git%20%E5%91%BD%E4%BB%A4%E8%A1%8C%E4%BD%BF%E7%94%A8%E4%BB%A3%E7%90%86%20VPN%202021-03-23%2016%3A41%20-%202021-06-08%2000%3A29,%E8%AE%BE%E7%BD%AE%E5%AE%8C%E4%B9%8B%E5%90%8E%20git%20clone%20%E4%B8%80%E4%B8%AA%E4%BB%93%E5%BA%93%E8%BF%9B%E8%A1%8C%E6%B5%8B%E8%AF%95%EF%BC%8C%E5%8F%91%E7%8E%B0%E9%80%9F%E5%BA%A6%E9%A3%99%E5%88%B0%E4%BA%86%205.5%20mb%2Fs%EF%BC%8C%E8%80%8C%E5%8E%9F%E6%9D%A5%E7%9A%84%E9%80%9F%E5%BA%A6%E6%98%AF%E5%8F%AA%E6%9C%89%E5%8D%81%E5%87%A0%20kb%2Fs%20%E7%9A%84%E3%80%82\">Git 命令行使用代理 VPN - Fany's Blog (fanlumaster.github.io)</a></p>\n<p>清空代理</p>\n<pre><code>git config --global --unset http.proxy\ngit config --global --unset https.proxy\n</code></pre>\n<pre><code>git config --global http.proxy 'http://127.0.0.1:10080'\ngit config --global https.proxy 'https://127.0.0.1:10080'\n</code></pre>\n<h3>git 设置username email</h3>\n<p><a href=\"https://blog.csdn.net/sjt19910311/article/details/83685616\">使用git config --global设置用户名和邮件_git config --global user.name-CSDN博客</a></p>"
+  },
+  "_id": "git 进阶1740387002539.md",
+  "_raw": {
+    "sourceFilePath": "git 进阶1740387002539.md",
+    "sourceFileName": "git 进阶1740387002539.md",
+    "sourceFileDir": ".",
+    "contentType": "markdown",
+    "flattenedPath": "git 进阶1740387002539"
+  },
+  "type": "Post",
+  "slug": "git 进阶1740387002539",
+  "path": "git 进阶1740387002539",
+  "filePath": "git 进阶1740387002539.md",
+  "toc": [
+    {
+      "value": "git 设置 代理",
+      "url": "#git-设置-代理",
+      "depth": 3
+    },
+    {
+      "value": "git 设置username email",
+      "url": "#git-设置username-email",
+      "depth": 3
+    }
+  ],
+  "structuredData": {
+    "@context": "https://schema.org",
+    "@type": "BlogPosting",
+    "headline": "git 设置 代理",
+    "datePublished": "2025-02-19T00:00:00.000Z",
+    "dateModified": "2025-02-19T00:00:00.000Z",
+    "image": "/static/images/twitter-card.png",
+    "url": "https://tailwind-nextjs-starter-blog.vercel.app/git 进阶1740387002539"
+  }
+}
